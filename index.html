@@ -1,37 +1,142 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
+<script src="script.js"></script>
 <body>
+<div id="sidebar" class="sidebar flex-shrink-0 p-3">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <a href="/" class="d-flex align-items-center text-decoration-none">
+                <img src="logoMini.png" alt="Logo" class="logo-mini me-2">
+            </a>
+            <button id="closeSidebar" class="btn btn-secondary" aria-label="Chiudi sidebar">
+                <i class="bi bi-x"></i>
+            </button>
+        </div>
+    <div class="search-bar mb-3">
+        <form class="d-flex align-items-center position-relative" role="search" aria-label="Barra di ricerca">
+            <input type="text" class="form-control search-input" placeholder="Cerca nel sito"
+            aria-label="Cerca nel sito">
+            <button type="submit" class="search-icon-btn" aria-label="Invia ricerca">
+                    <i class="bi bi-search"></i>
+                </button>
+        </form>
+    </div>
+    <div class="divider-dark"></div>    <!-- Division between sections -->
+    <ul class="list-unstyled ps-0">
+        <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                Home
+            </button>
+            <div class="collapse" id="home-collapse" style="">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Reports</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                Dashboard
+            </button>
+            <div class="collapse" id="dashboard-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Monthly</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                Orders
+            </button>
+            <div class="collapse" id="orders-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New</a></li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Processed</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Shipped</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="border-top my-3"></li>
+        <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                Account
+            </button>
+            <div class="collapse" id="account-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign out</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+</ul>
+</div>
+
 <header class="p-3 text-bg-white">
     <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-            </a>
+        <nav aria-label="Barra di navigazione principale">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 text-secondary">simbolo 1</a></li>
-                <li><a href="#" class="nav-link px-2 text-dark">simbolo 2</a></li>
-                <li><a href="#" class="nav-link px-2 text-dark">PERSONE</a></li>
-                <li><a href="#" class="nav-link px-2 text-dark">SCHEDE</a></li>
-                <li><a href="#" class="nav-link px-2 text-dark">ARCHIVIO</a></li>
-            </ul>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 text-dark" id="openSidebar" aria-label="menù"><i
+                            class="fas fa-bars big-icon" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="nav-link px-2 text-secondary" id="searchSidebar" aria-label="cerca"><i
+                            class="bi bi-search big-icon" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="nav-link px-2 text-dark nav-linkLight">PERSONE</a></li>
+                    <li><a href="#" class="nav-link px-2 text-dark nav-linkLight">SCHEDE</a></li>
+                    <li><a href="#" class="nav-link px-2 text-dark nav-linkLight">ARCHIVIO</a></li>
+                </ul>
 
+                <div class="text-end d-flex align-items-center gap-2">
+                    <a href="#" class="nav-link px-2 text-dark" aria-label="notifiche"><i class="bi bi-bell big-icon me-2"
+                                                                                          aria-hidden="true"></i></a>
 
-            <div class="text-end d-flex align-items-center gap-2">
-                <i class="fas fa-bell campanella me-2"></i>
-                <button type="button" class="btn btn-notizie me-2"><i class="fas fa-thumbtack icona-inclinatafa-thumbtack icona-inclinata me-2"></i> LE TUE NOTIZIE</button>
-                <button type="button" class="btn btn-promo me-2">PROMO FLASH</button>
-                <a href="#" class="nav-link px-2 text-dark"><i class="fas fa-user me-2"></i>ACCEDI</a>
+                    <button type="button" class="btn btn-notizie me-2 nav-link"><i class="bi bi-pin-angle-fill me-2 "
+                                                                          aria-hidden="true"></i> LE TUE NOTIZIE
+                    </button>
+                    <button type="button" class="btn btn-promo me-2 nav-link">PROMO FLASH</button>
+                    <a href="#" class="nav-link px-2 text-dark"><i class="bi bi-person big-icon me-2" aria-hidden="true"></i>
+                        ACCEDI</a>
+                </div>
             </div>
-        </div>
+        </nav>
     </div>
-</header></body>
+    <div class="divider-light container"></div>
+</header>
+</body>
 </html>

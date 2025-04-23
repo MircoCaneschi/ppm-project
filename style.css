@@ -1,19 +1,165 @@
 @import "node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+header .container {
+    max-width: 70%; /* Riduce la larghezza della navbar */
+    margin: 0 auto; /* Centra la navbar */
+    padding: 0 20px; /* Aggiunge spazio interno ai lati */
+}
+
+.divider-dark{
+    height: 1px; /* Altezza della linea */
+    background-color: #343a40; /* Colore della linea */
+    margin: 20px 0; /* Spaziatura sopra e sotto */
+    width: 100%; /* Larghezza della linea */
+}
+.divider-light {
+    height: 1px; /* Altezza della linea */
+    background-color: #e0e0e0; /* Colore grigio chiaro */
+    margin: 3px 0; /* Spaziatura sopra e sotto */
+    width: 100%; /* Larghezza della linea */
+}
+
+.nav > li:nth-child(2),
+.nav > li:nth-child(3),
+.nav > li:nth-child(4) {
+    position: relative;
+}
+
+.nav > li:nth-child(2)::after,
+.nav > li:nth-child(3)::after,
+.nav > li:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 80%; /* Altezza della linea */
+    width: 1px; /* Larghezza della linea */
+    background-color: #e0e0e0; /* Colore della linea */
+}
+
+header .nav-link {
+    font-size: 13px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 18px;
+    text-align: center;
+}
+header .nav-linkLight{
+    font-size: 0.75rem; /* Dimensione uniforme */
+    font-weight: 700; /* Spessore uniforme */
+    color: #565656 !important;
+}
+
+header .big-icon {
+    font-size: 1.2rem;
+}
+
+
 .btn-notizie {
     background-color: #450d13;
     color: white;
-    border-radius: 50px;
+    border-radius: 32px;
+    padding: 8px 20px; /* Spaziatura interna */
+    height: auto; /* Altezza dinamica */
+    width: auto; /* Larghezza dinamica */
 }
 
-.btn-promo {
+header .btn-promo {
     background-color: #b22222;
     color: white;
     border-radius: 50px;
+    border: none; /* Rimuove eventuali bordi predefiniti */
+    padding: 8px 20px; /* Spaziatura interna */
+    height: auto; /* Altezza dinamica */
+    width: auto; /* Larghezza dinamica */
 }
 
-.icona-inclinata {
-    transform: rotate(45deg);
+header .btn-notizie:hover{
+    background-color: #450d13 !important; /* Mantiene il colore di sfondo */
+    color: white !important; /* Mantiene il colore del testo */
+    border: none !important; /* Evita cambiamenti al bordo */
+    text-decoration: none !important; /* Evita sottolineature */
+    box-shadow: none !important; /* Rimuove eventuali ombre */
 }
+header .btn-promo:hover {
+    background-color: #b22222 !important; /* Mantiene il colore di sfondo */
+    color: white !important; /* Mantiene il colore del testo */
+    border: none !important; /* Evita cambiamenti al bordo */
+    text-decoration: none !important; /* Evita sottolineature */
+    box-shadow: none !important; /* Rimuove eventuali ombre */
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    width: 400px; /* Larghezza della sidebar */
+    left: -400px; /* Nasconde la sidebar fuori dallo schermo */
+    height: 100%;
+    background-color: #f8f9fa;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 1050; /* Assicura che sia sopra altri elementi */
+}
+
+.sidebar.open {
+    left: 0; /* Mostra la sidebar */
+}
+
+.logo-mini {
+    width: 40px;
+    height: 40px;
+}
+
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar .search-input {
+    padding-right: 40px; /* Spazio per l'icona a destra */
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar .search-input:focus {
+    outline: none; /* Rimuove il bordo blu */
+    border-color: #343a40; /* Colore del bordo più scuro */
+    font-weight: bold; /* Enfatizza il testo */
+    box-shadow: none; /* Rimuove eventuali ombre */
+}
+
+.search-bar .search-icon-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 1.2rem;
+    color: #6c757d; /* Colore dell'icona */
+    cursor: pointer;
+}
+
+.search-bar .search-icon-btn:focus {
+    outline: none; /* Rimuove il bordo di focus */
+}
+
+#closeSidebar {
+    background: none; /* Rimuove lo sfondo del pulsante */
+    border: none; /* Rimuove il bordo */
+    font-size: 1.5rem; /* Dimensione dell'icona */
+    color: #6c757d; /* Colore dell'icona */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+}
+
+#closeSidebar:hover {
+    color: #343a40; /* Cambia il colore al passaggio del mouse */
+}
+
 /* doesn't work the ring
 @keyframes dondola {
     0% {
