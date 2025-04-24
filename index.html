@@ -31,11 +31,12 @@
         </form>
     </div>
     <div class="divider-dark"></div>    <!-- Division between sections -->
+
     <ul class="list-unstyled ps-0">
         <li class="mb-1">
             <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
                     data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
-                Home
+                Home <i class="bi bi-chevron-right"></i>
             </button>
             <div class="collapse" id="home-collapse" style="">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -104,8 +105,7 @@
         </li>
     </ul>
 </div>
-</ul>
-</div>
+
 
 <header class="p-3 text-bg-white">
     <div class="container">
@@ -137,6 +137,32 @@
         </nav>
     </div>
     <div class="divider-light container"></div>
+
+
+    <div class="header-middle">
+        <!-- <div class="wrapper container-fluid"> -->
+        <div class="header-middle__content">
+            <div class="row middle-xs">
+                <div class="col-xs center" aria-label="Logo principale">
+                    <div class="msg-logo">
+                        <a href="https://www.ilmessaggero.it" title="Il Messaggero">
+                            <img src="logoBig.png" alt="Il Messaggero" class="logoBig">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs right" aria-label="Meteo e data">
+                    <ul id="meteo">
+                        <li class="data"><time>Mercoledì 23 Aprile</time> agg. alle <time datetime="2025-04-23T13:45:14">13:45</time></li>
+                        <li>
+                            <span class="icon"><a href="#" title="Meteo"><img src="https://statics.cedscdn.it/ilmessaggero.it/img/icone_meteo/sole.svg" width="16" height="16" alt="meteo"></a></span>
+                            <span class="temperatura"><a href="#" class="dark-link" title="Meteo">19.9 °C</a></span>
+                            <span class="localita"><a href="#" class="dark-link" title="Meteo">Roma</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
 </body>
 </html>

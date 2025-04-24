@@ -111,6 +111,10 @@ header .btn-promo:hover {
     width: 40px;
     height: 40px;
 }
+.logoBig {
+    width: 400px;
+    height: 92px;
+}
 
 
 .search-bar {
@@ -159,6 +163,45 @@ header .btn-promo:hover {
 #closeSidebar:hover {
     color: #343a40; /* Cambia il colore al passaggio del mouse */
 }
+
+header .dark-link{
+    color: black;
+    text-decoration: none;
+}
+
+        /* non si allinea nel modo giusto*/
+
+.header-middle__content {
+    display: flex;
+    justify-content: center; /* centra il contenuto orizzontalmente */
+    align-items: center;     /* centra verticalmente */
+    position: relative;
+    padding: 20px;
+}
+
+.header-middle__content .center {
+    text-align: center;
+    flex-grow: 1; /* si espande per occupare lo spazio centrale */
+}
+
+.header-middle__content .right {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+    font-size: 14px;
+}
+#meteo {
+    list-style: none; /* Rimuove i pallini */
+    padding: 0; /* Rimuove il padding predefinito */
+    margin: 0; /* Rimuove il margine predefinito */
+}
+
+.bi-chevron-right {
+    font-size: 0.8rem; /* Riduci la dimensione dell'icona */
+}
+
 
 /* doesn't work the ring
 @keyframes dondola {
