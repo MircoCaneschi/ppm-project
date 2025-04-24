@@ -202,6 +202,41 @@ header .dark-link{
     font-size: 0.8rem; /* Riduci la dimensione dell'icona */
 }
 
+.header-bottom__content {
+    display: flex;
+    justify-content: center; /* Centra il contenuto orizzontalmente */
+    align-items: center; /* Allinea verticalmente */
+    /* Spaziatura interna */
+}
+
+.header-bottom__content .topics {
+    display: flex;
+    flex-wrap: wrap; /* Permette di andare a capo se necessario */
+    justify-content: center; /* Centra gli elementi */
+    gap: 8px 50px; /* Spaziatura tra gli elementi */
+    list-style: none; /* Rimuove i pallini */
+    padding: 0; /* Rimuove il padding predefinito */
+    margin: 0; /* Rimuove il margine predefinito */
+}
+
+.header-bottom__content .topics li {
+    text-align: center; /* Centra il testo */
+}
+
+.header-bottom__content .topics a {
+    text-transform: uppercase; /* Trasforma il testo in maiuscolo */
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 21px;
+    color: #b22222;
+    text-decoration: none;
+}
+
+.header-bottom__content .topics a:hover {
+    background-color: #f0f0f0; /* Colore di sfondo al passaggio del mouse */
+}
+
 
 /* doesn't work the ring
 @keyframes dondola {
