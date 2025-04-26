@@ -3,7 +3,7 @@
 header .container {
     max-width: 70%; /* Riduce la larghezza della navbar */
     margin: 0 auto; /* Centra la navbar */
-    padding: 0 20px; /* Aggiunge spazio interno ai lati */
+    padding: 0 0; /* Aggiunge spazio interno ai lati */
 }
 
 .divider-dark{
@@ -17,6 +17,7 @@ header .container {
     background-color: #e0e0e0; /* Colore grigio chiaro */
     margin: 3px 0; /* Spaziatura sopra e sotto */
     width: 100%; /* Larghezza della linea */
+    z-index: 1;
 }
 
 .nav > li:nth-child(2),
@@ -164,12 +165,55 @@ header .btn-promo:hover {
     color: #343a40; /* Cambia il colore al passaggio del mouse */
 }
 
-header .dark-link{
-    color: black;
-    text-decoration: none;
+.dark-link{
+    color: black !important;
+    text-decoration: none !important;
+    list-style: none !important;
 }
 
-        /* non si allinea nel modo giusto*/
+.area .row .item_content {
+    text-align: left; /* Allinea tutto il contenuto a sinistra */
+}
+
+.area .row .item_content .firma {
+    color: firebrick !important;
+    font-style: italic !important;
+    display: block; /* Trasforma lo span in un elemento blocco */
+    margin: 0; /* Rimuove eventuali margini */
+    text-align: left; /* Allinea il testo all'interno dello span */
+}
+
+.area .row .item_content h2{
+    line-height: 10px !important;
+    text-align: left !important;
+}
+
+.area .row .item_content h2.titolo a {
+    color: black !important; /* Colore del testo */
+    font-size: 15px !important; /* Dimensione del testo */
+    text-decoration: none !important; /* Rimuove la sottolineatura */
+    vertical-align: baseline;
+}
+
+/* Posiziona l'icona vettoriale sopra l'immagine della notizia */
+.area .row .item_content figure .info-item {
+    position: absolute;
+    bottom: 0; /* Posiziona in basso */
+    left: 0; /* Posiziona a sinistra */
+    margin: 0; /* Rimuove margini */
+    padding: 0; /* Rimuove padding */
+    list-style: none; /* Rimuove il pallino */
+    z-index: 2; /* Assicura che sia sopra l'immagine */
+}
+
+.area .row .item_content figure .info-item li {
+    display: inline-block; /* Mostra l'icona come elemento inline */
+}
+
+/* Assicura che il contenitore della figura sia posizionato relativamente */
+.area .row .item_content figure {
+    position: relative;
+}
 
 .header-middle__content {
     display: flex;
@@ -196,6 +240,52 @@ header .dark-link{
     list-style: none; /* Rimuove i pallini */
     padding: 0; /* Rimuove il padding predefinito */
     margin: 0; /* Rimuove il margine predefinito */
+}
+@media (max-width: 1200px) {
+    #meteo {
+        transform: translateX(100px); /* Sposta il meteo di 100px a destra */
+        transition: transform 0.3s ease; /* Aggiunge una transizione fluida */
+    }
+}
+
+@media (max-width: 768px) {
+    #meteo {
+        display: none; /* Nasconde il meteo */
+    }
+}
+
+@media (max-width: 992px) {
+    .logoBig {
+        width: 300px; /* Ridimensiona il logo */
+        height: auto; /* Mantiene le proporzioni */
+    }
+}
+
+@media (max-width: 768px) {
+    .logoBig {
+        width: 200px; /* Ridimensiona ulteriormente il logo */
+        height: auto; /* Mantiene le proporzioni */
+    }
+}
+
+@media (max-width: 576px) {
+    .logoBig {
+        width: 150px; /* Ridimensiona ancora di più il logo */
+        height: auto; /* Mantiene le proporzioni */
+    }
+}
+header .data{
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+}
+header .temperatura,
+header .localita{
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
 }
 
 .bi-chevron-right {
@@ -237,30 +327,58 @@ header .dark-link{
     background-color: #f0f0f0; /* Colore di sfondo al passaggio del mouse */
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Per gestire il comportamento su schermi più piccoli */
+    gap: 15px; /* Spaziatura tra gli elementi */
+}
 
-/* doesn't work the ring
-@keyframes dondola {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(-15deg);
-    }
-    50% {
-        transform: rotate(15deg);
-    }
-    75% {
-        transform: rotate(-15deg);
-    }
-    100% {
-        transform: rotate(0deg);
+.col-md-3 {
+    flex: 0 0 25%; /* Assicura che ogni elemento occupi il 25% della larghezza */
+    max-width: 25%;
+}
+
+.item_content {
+    text-align: center; /* Centra il contenuto all'interno di ogni articolo */
+    margin: 0 auto; /* Centra gli articoli */
+}
+
+/* Contenitore principale degli articoli */
+.area .row {
+    display: flex; /* Imposta il layout flessibile */
+    flex-wrap: wrap; /* Permette agli articoli di andare a capo se necessario */
+    justify-content: space-between; /* Distribuisce gli articoli con spazi uniformi */
+    gap: 15px; /* Spaziatura tra gli articoli */
+}
+
+/* Articoli */
+.area .row .col-xs-3 {
+    flex: 0 0 calc(25% - 15px); /* Ogni articolo occupa il 25% della larghezza meno il gap */
+    max-width: calc(25% - 15px); /* Limita la larghezza massima */
+    box-sizing: border-box; /* Include padding e bordi nella larghezza */
+}
+
+.area .row .item_content {
+    text-align: center; /* Centra il contenuto degli articoli */
+    margin: 0 auto; /* Centra gli articoli */
+}
+
+/* Layout per schermi medi (tablet) */
+@media (max-width: 992px) {
+    .area .row .col-xs-3 {
+        flex: 0 0 calc(50% - 15px); /* Ogni articolo occupa il 50% della larghezza meno il gap */
+        max-width: calc(50% - 15px); /* Limita la larghezza massima */
     }
 }
 
-.campanella {
-    animation: dondola 0.5s ease-in-out 1;      /* Tintinnio di mezzo secondo
-    animation-delay: 0s;                        /* Nessun ritardo iniziale
-    animation-iteration-count: infinite;        /* Ripetizione infinita
-    animation-timing-function: steps(1, end);   /* Si ferma dopo il movimento
+/* Layout per schermi piccoli (smartphone) */
+@media (max-width: 576px) {
+    .area .row .col-xs-3 {
+        flex: 0 0 100%; /* Ogni articolo occupa il 100% della larghezza */
+        max-width: 100%; /* Limita la larghezza massima */
+    }
+
+    .area .row {
+        gap: 10px; /* Riduce la spaziatura tra gli articoli */
+    }
 }
-*/
