@@ -223,6 +223,11 @@ header .btn-promo:hover {
     padding: 20px;
 }
 
+/* Hover per le scritte delle notizie nella sezione "501" */
+.area[data-id="501"] .row .item_content h2.titolo a:hover {
+    color: #b3b3b3 !important; /* Cambia il colore del testo in grigio chiaro */
+}
+
 .header-middle__content .center {
     text-align: center;
     flex-grow: 1; /* si espande per occupare lo spazio centrale */
@@ -382,3 +387,110 @@ header .localita{
         gap: 10px; /* Riduce la spaziatura tra gli articoli */
     }
 }
+
+/* Layout per main-content e right-rail */
+#main-content {
+    flex: 0 0 75%; /* Occupa il 75% della larghezza */
+    max-width: 75%;
+}
+
+#right-rail {
+    flex: 0 0 25%; /* Occupa il 25% della larghezza */
+    max-width: 25%;
+}
+
+.row {
+    display: flex; /* Imposta il layout flessibile */
+    flex-wrap: nowrap; /* Evita che gli elementi vadano a capo */
+    gap: 15px; /* Spaziatura tra le colonne */
+}
+
+/* Adattamento per schermi piccoli */
+@media (max-width: 768px) {
+    #main-content, #right-rail {
+        flex: 0 0 100%; /* Ogni sezione occupa il 100% della larghezza */
+        max-width: 100%;
+    }
+
+    .row {
+        flex-wrap: wrap; /* Permette agli elementi di andare a capo */
+    }
+}
+
+.testatina-articolo{
+    color: firebrick !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none !important;
+}
+
+/* Stile per la navbar quando si scorre verso il basso */
+header.scrolled {
+    background-color: white; /* Sfondo bianco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: fixed; /* Mantiene la navbar visibile */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 5px 15px; /* Riduce il padding intorno */
+    height: 60px; /* Altezza ridotta */
+}
+
+/* Rimuovi la linea divider-light in modalità scrollata */
+header.scrolled .divider-light {
+    display: none !important;
+}
+
+/* Stile per il logo nella navbar durante lo scroll */
+header .logo-big-navbar {
+    height: 40px; /* Altezza del logo */
+    max-width: 150px; /* Larghezza massima */
+    margin: 0 auto; /* Centra il logo */
+    display: block;
+}
+
+/* Nascondi i link "PERSONE", "SCHEDE" e "ARCHIVIO" durante lo scroll */
+header.scrolled .nav-linkLight {
+    display: none !important;
+}
+
+/* Nascondi tutto tranne il div .container durante lo scroll */
+header.scrolled .header-middle,
+header.scrolled .header-bottom {
+    display: none !important;
+}
+
+header.scrolled .container {
+    display: block !important; /* Mostra solo il div container*/
+}
+
+/* Stile per il logo centrato nella navbar scrollata */
+header.scrolled .navbar-logo {
+    height: 30px; /* Altezza del logo */
+    max-width: 120px; /* Larghezza massima */
+    margin: 0 auto; /* Centra il logo */
+    display: block;
+}
+
+/* Disposizione orizzontale per la navbar */
+header.scrolled .d-flex {
+    display: flex !important; /* Disposizione flessibile */
+    justify-content: space-between; /* Spaziatura tra gli elementi */
+    align-items: center; /* Allinea verticalmente */
+    flex-wrap: nowrap; /* Mantiene tutto in fila orizzontale */
+}
+
+/* Adattamento per schermi piccoli */
+@media (max-width: 768px) {
+    header.scrolled {
+        padding: 5px 10px; /* Riduce ulteriormente il padding */
+        height: 50px; /* Altezza ridotta per schermi piccoli */
+    }
+
+    header.scrolled .navbar-logo {
+        height: 25px; /* Riduce l'altezza del logo */
+        max-width: 100px; /* Riduce la larghezza massima */
+    }
+}
+
