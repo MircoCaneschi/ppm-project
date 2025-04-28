@@ -58,8 +58,8 @@ header .big-icon {
 
 
 .btn-notizie {
-    background-color: #450d13;
-    color: white;
+    background-color: #450d13 !important;
+    color: white !important;
     border-radius: 32px;
     padding: 8px 20px; /* Spaziatura interna */
     height: auto; /* Altezza dinamica */
@@ -67,8 +67,8 @@ header .big-icon {
 }
 
 header .btn-promo {
-    background-color: #b22222;
-    color: white;
+    background-color: #b22222 !important;
+    color: white !important;
     border-radius: 50px;
     border: none; /* Rimuove eventuali bordi predefiniti */
     padding: 8px 20px; /* Spaziatura interna */
@@ -76,20 +76,7 @@ header .btn-promo {
     width: auto; /* Larghezza dinamica */
 }
 
-header .btn-notizie:hover{
-    background-color: #450d13 !important; /* Mantiene il colore di sfondo */
-    color: white !important; /* Mantiene il colore del testo */
-    border: none !important; /* Evita cambiamenti al bordo */
-    text-decoration: none !important; /* Evita sottolineature */
-    box-shadow: none !important; /* Rimuove eventuali ombre */
-}
-header .btn-promo:hover {
-    background-color: #b22222 !important; /* Mantiene il colore di sfondo */
-    color: white !important; /* Mantiene il colore del testo */
-    border: none !important; /* Evita cambiamenti al bordo */
-    text-decoration: none !important; /* Evita sottolineature */
-    box-shadow: none !important; /* Rimuove eventuali ombre */
-}
+
 
 
 .sidebar {

@@ -1,12 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector("header");
     const navContainer = document.querySelector(".container .d-flex");
-    const elementsToHide = document.querySelectorAll(".nav-linkLight, .header-middle, .header-bottom, .divider-light");
+    const elementsToHide = document.querySelectorAll(".header-middle, .header-bottom, .divider-light, .nav-linkLight:not(#openSidebar):not(#searchSidebar)");
     const navbarLogo = document.createElement("img");
 
     navbarLogo.src = "placeholder.png"; // Percorso dell'immagine
     navbarLogo.alt = "Logo Navbar";
     navbarLogo.classList.add("navbar-logo");
+
+    const sidebar = document.getElementById("sidebar");
+    const openSidebar = document.getElementById("openSidebar");
+    const searchSidebar = document.getElementById("searchSidebar");
+    const closeSidebar = document.getElementById("closeSidebar");
 
     let lastScrollY = 0;
 
@@ -42,6 +47,19 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
+
+    // Eventi per aprire e chiudere la sidebar
+    openSidebar.addEventListener("click", function () {
+        sidebar.classList.add("open");
+    });
+
+    searchSidebar.addEventListener("click", function () {
+        sidebar.classList.add("open");
+    });
+
+    closeSidebar.addEventListener("click", function () {
+        sidebar.classList.remove("open");
+    });
 
     window.addEventListener("scroll", updateNavbarOnScroll);
     window.addEventListener("resize", updateNavbarOnResize); // Aggiungi il listener per il ridimensionamento
