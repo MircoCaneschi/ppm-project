@@ -27,6 +27,17 @@ header .container {
     z-index: 1;
 }
 
+/* Stile corretto per il divisore verticale nel main */
+.divider-vertical {
+    width: 1px; /* Larghezza del divisore */
+    background-color: #e0e0e0; /* Colore del divisore */
+    margin: 20px 15px 0 15px; /* Aggiunge un margine superiore più lungo */
+    height: auto; /* Altezza dinamica */
+    display: inline-block; /* Mostra il divisore come elemento in linea */
+    padding: 0; /* Rimuove il padding */
+    box-sizing: content-box; /* Assicura che solo la larghezza del divisore venga colorata */
+}
+
 .nav > li:nth-child(2),
 .nav > li:nth-child(3),
 .nav > li:nth-child(4) {
