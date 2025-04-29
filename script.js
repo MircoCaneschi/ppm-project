@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector("header");
     const navContainer = document.querySelector(".container .d-flex");
-    const elementsToHide = document.querySelectorAll(".header-middle, .header-bottom, .divider-light, .nav-linkLight:not(#openSidebar):not(#searchSidebar)");
+    const elementsToHide = document.querySelectorAll(".header-middle, .header-bottom, .nav-linkLight:not(#openSidebar):not(#searchSidebar)");
     const navbarLogo = document.createElement("img");
 
-    navbarLogo.src = "placeholder.png"; // Percorso dell'immagine
+    navbarLogo.src = "logoBig.jpeg"; // Percorso dell'immagine
     navbarLogo.alt = "Logo Navbar";
     navbarLogo.classList.add("navbar-logo");
 
@@ -67,3 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Esegui l'aggiornamento iniziale per gestire il ridimensionamento all'avvio
     updateNavbarOnResize();
 });
+
+
+

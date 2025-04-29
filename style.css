@@ -404,24 +404,79 @@ header .localita{
     }
 }
 
-.testatina-articolo{
-    color: firebrick !important;
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-decoration: none !important;
+
+/* Stile per la testatina articolo */
+.testatina-articolo a {
+    color: firebrick !important; /* Colore rosso mattone */
+    font-weight: 900;
+    font-size: 0.8rem;
+    text-decoration: none !important; /* Rimuove la sottolineatura */
+    text-align: left !important; /* Allinea a sinistra */
+    ;
 }
+/* Allinea a sinistra il contenitore della testatina */
+.testatina-articolo {
+    text-align: left !important; /* Allinea il contenuto a sinistra */
+    display: block; /* Assicura che occupi tutta la larghezza disponibile */
+    margin-left: 0; /* Rimuove eventuali margini a sinistra */
+}
+/* Stile per il titolo dell'articolo */
+.titolo-main a {
+    text-decoration: none;
+    color: black;
+    line-height: normal;
+    font-weight: bold;
+}
+.approfondimenti {
+    display: flex;
+    gap: 10px; /* Spaziatura tra gli elementi */
+    list-style: none; /* Rimuove i pallini */
+    padding: 0; /* Rimuove il padding */
+    margin: 0; /* Rimuove il margine */
+}
+
+.approfondimenti li {
+    display: inline; /* Assicura che gli elementi rimangano in linea */
+}
+/*corregge le caratteristiche del quadrato*/
+.approfondimenti li i.bi-square-fill {
+    font-size: 8px; /* Cambia la dimensione del quadrato */
+    color: #b22222; /* Cambia il colore del quadrato */
+    margin-right: 5px; /* Aggiunge spazio tra il quadrato e il testo */
+    vertical-align: middle; /* Allinea verticalmente il quadrato con il testo */
+}
+/* Stile per i tag sotto alle notizie */
+.tags{
+    color: black !important; /* Colore del testo */
+    font-size: 15px !important; /* Dimensione del testo */
+    text-decoration: none !important; /* Rimuove la sottolineatura */
+    vertical-align: baseline;
+    font-weight: 500
+}
+/*allinea l'immagine della notizi a sinistra con il testo*/
+.area .row .item_content figure {
+    text-align: left; /* Allinea il contenuto della figura a sinistra */
+}
+
+.area .row .item_content figure img {
+    display: block; /* Assicura che l'immagine si comporti come un elemento di blocco */
+    margin: 0; /* Rimuove eventuali margini */
+}
+
+
 
 /* Stile per la navbar quando si scorre verso il basso */
 header.scrolled {
-    background-color: white; /* Sfondo bianco */
+    background-color: white !important; /* Sfondo bianco */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
     position: fixed; /* Mantiene la navbar visibile */
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 5px 15px; /* Riduce il padding intorno */
-    height: 60px; /* Altezza ridotta */
+    padding: 0 15px !important; /* Riduce il padding intorno */
+    height: auto; /* Adatta l'altezza dinamicamente */
+    min-height: 40px; /* Altezza minima */
 }
 
 /* Rimuovi la linea divider-light in modalità scrollata */
@@ -472,7 +527,7 @@ header.scrolled .d-flex {
 @media (max-width: 768px) {
     header.scrolled {
         padding: 5px 10px; /* Riduce ulteriormente il padding */
-        height: 50px; /* Altezza ridotta per schermi piccoli */
+        min-height: 50px; /* Altezza minima per schermi piccoli */
     }
 
     header.scrolled .navbar-logo {
