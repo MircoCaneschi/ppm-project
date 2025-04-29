@@ -416,7 +416,7 @@ header .localita{
 .testatina-articolo a {
     color: firebrick !important; /* Colore rosso mattone */
     font-weight: 900;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-decoration: none !important; /* Rimuove la sottolineatura */
     text-align: left !important; /* Allinea a sinistra */
     ;
@@ -602,7 +602,7 @@ header.scrolled .d-flex {
     line-height: normal;
     font-weight: bold;
 }
-.strip-1-right{
+.divider{
     margin-bottom: 30px;
 }
 
