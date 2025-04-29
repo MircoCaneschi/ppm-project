@@ -19,6 +19,13 @@ header .container {
     width: 100%; /* Larghezza della linea */
     z-index: 1;
 }
+.divider-light-spaced {
+    height: 1px; /* Altezza della linea */
+    background-color: #e0e0e0; /* Colore grigio chiaro */
+    margin: 15px 0; /* Spaziatura sopra e sotto */
+    width: 100%; /* Larghezza della linea */
+    z-index: 1;
+}
 
 .nav > li:nth-child(2),
 .nav > li:nth-child(3),
@@ -461,9 +468,9 @@ header .localita{
 .area .row .item_content figure img {
     display: block; /* Assicura che l'immagine si comporti come un elemento di blocco */
     margin: 0; /* Rimuove eventuali margini */
+    width: 100%; /* L'immagine occupa tutta la larghezza del contenitore */
+    height: auto; /* Mantiene le proporzioni */
 }
-
-
 
 /* Stile per la navbar quando si scorre verso il basso */
 header.scrolled {
@@ -535,4 +542,69 @@ header.scrolled .d-flex {
         max-width: 100px; /* Riduce la larghezza massima */
     }
 }
+/*stili per strip-1-right*/
+/* affianca immagine e titolo */
+
+/* Posiziona immagine e testo uno accanto all'altro */
+.strip-1-right .row {
+    display: flex; /* Imposta il layout flessibile */
+    flex-wrap: nowrap; /* Evita che gli elementi vadano a capo */
+    align-items: center; /* Allinea verticalmente */
+    gap: 15px; /* Spaziatura tra immagine e testo */
+}
+
+.strip-1-right .col-xs-6 {
+    flex: 0 0 50%; /* Ogni colonna occupa il 50% della larghezza */
+    max-width: 50%; /* Limita la larghezza massima */
+    box-sizing: border-box; /* Include padding e bordi nella larghezza */
+}
+
+.strip-1-right .col-xs-6 figure {
+    margin: 0; /* Rimuove margini dall'immagine */
+}
+
+.strip-1-right .valign__content {
+    text-align: left; /* Allinea il testo a sinistra */
+}
+
+.strip-1-right .valign__content .titolo {
+    font-size: 1rem; /* Dimensione del titolo */
+    font-weight: bold; /* Testo in grassetto */
+    line-height: 1.4; /* Spaziatura tra le righe */
+    margin-bottom: 10px; /* Spaziatura sotto il titolo */
+}
+
+.strip-1-right .valign__content .firma {
+    font-size: 0.9rem; /* Dimensione del testo dell'autore */
+    color: #555; /* Colore grigio scuro */
+    margin-top: 5px; /* Spaziatura sopra l'autore */
+}
+
+@media (max-width: 768px) {
+    .strip-1-right .row {
+        flex-wrap: wrap; /* Permette agli elementi di andare a capo su schermi piccoli */
+    }
+
+    .strip-1-right .col-xs-6 {
+        flex: 0 0 100%; /* Ogni colonna occupa il 100% della larghezza */
+        max-width: 100%; /* Limita la larghezza massima */
+    }
+
+    .strip-1-right .valign__content {
+        text-align: center; /* Centra il testo su schermi piccoli */
+    }
+}
+
+.titolo-main-medium a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: black;
+    line-height: normal;
+    font-weight: bold;
+}
+.strip-1-right{
+    margin-bottom: 30px;
+}
+
+
 
