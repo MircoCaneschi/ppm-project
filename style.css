@@ -19,9 +19,9 @@ header .container {
     width: 100%; /* Larghezza della linea */
     z-index: 1;
 }
-.divider-light-spaced {
+.divider-dark-spaced {
     height: 1px; /* Altezza della linea */
-    background-color: #e0e0e0; /* Colore grigio chiaro */
+    background-color: #343a40; /* Colore grigio scuro */
     margin: 15px 0; /* Spaziatura sopra e sotto */
     width: 100%; /* Larghezza della linea */
     z-index: 1;
@@ -37,6 +37,16 @@ header .container {
     padding: 0; /* Rimuove il padding */
     box-sizing: content-box; /* Assicura che solo la larghezza del divisore venga colorata */
 }
+.divider-vertical-dark {
+    width: 1px; /* Larghezza del divisore */
+    background-color: #343a40; /* Colore del divisore */
+    margin: 20px 15px 0 15px; /* Aggiunge un margine superiore più lungo */
+    height: auto; /* Altezza dinamica */
+    display: inline-block; /* Mostra il divisore come elemento in linea */
+    padding: 0; /* Rimuove il padding */
+    box-sizing: content-box; /* Assicura che solo la larghezza del divisore venga colorata */
+}
+
 
 .nav > li:nth-child(2),
 .nav > li:nth-child(3),
@@ -180,7 +190,7 @@ header .btn-promo {
     text-align: left; /* Allinea tutto il contenuto a sinistra */
 }
 
-.area .row .item_content .firma {
+.firma {
     color: firebrick !important;
     font-style: italic !important;
     display: block; /* Trasforma lo span in un elemento blocco */
@@ -445,6 +455,7 @@ header .localita{
     line-height: normal;
     font-weight: bold;
 }
+
 .approfondimenti {
     display: flex;
     gap: 10px; /* Spaziatura tra gli elementi */
@@ -452,12 +463,19 @@ header .localita{
     padding: 0; /* Rimuove il padding */
     margin: 0; /* Rimuove il margine */
 }
-
 .approfondimenti li {
     display: inline; /* Assicura che gli elementi rimangano in linea */
 }
+.approfondimenti-col {
+    text-align: left;
+     gap: 10px; /* Spaziatura tra gli elementi */
+     list-style: none; /* Rimuove i pallini */
+     padding: 0; /* Rimuove il padding */
+     margin: 0; /* Rimuove il margine */
+ }
+
 /*corregge le caratteristiche del quadrato*/
-.approfondimenti li i.bi-square-fill {
+i.bi-square-fill {
     font-size: 8px; /* Cambia la dimensione del quadrato */
     color: #b22222; /* Cambia il colore del quadrato */
     margin-right: 5px; /* Aggiunge spazio tra il quadrato e il testo */
@@ -617,5 +635,39 @@ header.scrolled .d-flex {
     margin-bottom: 30px;
 }
 
+.articles-row {
+    display: flex;
+    gap: 15px; /* Spaziatura tra gli articoli */
+    justify-content: space-between; /* Distribuisce uniformemente gli articoli */
+    align-items: baseline; /* Allinea gli articoli in alto */
+}
 
 
+.titolo-main-small{
+    line-height: 14px;
+    text-align: left;
+}
+
+.titolo-main-small a{
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.strip-3-bottom figure {
+    width: 264px; /* Larghezza uniforme */
+    height: 144px; /* Altezza uniforme */
+    margin: 0; /* Rimuove margini */
+    overflow: hidden; /* Nasconde il contenuto in eccesso */
+}
+
+.strip-3-bottom figure img {
+    width: 100%; /* Adatta l'immagine alla larghezza del contenitore */
+    height: 100%; /* Adatta l'immagine all'altezza del contenitore */
+    object-fit: cover; /* Mantiene le proporzioni e riempie il contenitore */
+}
+
+.titolo-hover a:hover {
+    color: #b3b3b3 !important;
+}
