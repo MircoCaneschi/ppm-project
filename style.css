@@ -6,12 +6,13 @@ header .container {
     padding: 0 0; /* Aggiunge spazio interno ai lati */
 }
 
-.divider-dark{
+.divider-dark {
     height: 1px; /* Altezza della linea */
     background-color: #343a40; /* Colore della linea */
     margin: 20px 0; /* Spaziatura sopra e sotto */
     width: 100%; /* Larghezza della linea */
 }
+
 .divider-light {
     height: 1px; /* Altezza della linea */
     background-color: #e0e0e0; /* Colore grigio chiaro */
@@ -19,6 +20,7 @@ header .container {
     width: 100%; /* Larghezza della linea */
     z-index: 1;
 }
+
 .divider-dark-spaced {
     height: 1px; /* Altezza della linea */
     background-color: #343a40; /* Colore grigio scuro */
@@ -37,6 +39,7 @@ header .container {
     padding: 0; /* Rimuove il padding */
     box-sizing: content-box; /* Assicura che solo la larghezza del divisore venga colorata */
 }
+
 .divider-vertical-dark {
     width: 1px; /* Larghezza del divisore */
     background-color: #343a40; /* Colore del divisore */
@@ -74,7 +77,8 @@ header .nav-link {
     line-height: 18px;
     text-align: center;
 }
-header .nav-linkLight{
+
+header .nav-linkLight {
     font-size: 0.75rem; /* Dimensione uniforme */
     font-weight: 700; /* Spessore uniforme */
     color: #565656 !important;
@@ -105,8 +109,6 @@ header .btn-promo {
 }
 
 
-
-
 .sidebar {
     position: fixed;
     top: 0;
@@ -127,6 +129,7 @@ header .btn-promo {
     width: 40px;
     height: 40px;
 }
+
 .logoBig {
     width: 400px;
     height: 92px;
@@ -180,7 +183,7 @@ header .btn-promo {
     color: #343a40; /* Cambia il colore al passaggio del mouse */
 }
 
-.dark-link{
+.dark-link {
     color: black !important;
     text-decoration: none !important;
     list-style: none !important;
@@ -198,7 +201,7 @@ header .btn-promo {
     text-align: left; /* Allinea il testo all'interno dello span */
 }
 
-.area .row .item_content h2{
+.area .row .item_content h2 {
     line-height: 10px !important;
     text-align: left !important;
 }
@@ -233,7 +236,7 @@ header .btn-promo {
 .header-middle__content {
     display: flex;
     justify-content: center; /* centra il contenuto orizzontalmente */
-    align-items: center;     /* centra verticalmente */
+    align-items: center; /* centra verticalmente */
     position: relative;
     padding: 20px;
 }
@@ -256,11 +259,13 @@ header .btn-promo {
     text-align: right;
     font-size: 14px;
 }
+
 #meteo {
     list-style: none; /* Rimuove i pallini */
     padding: 0; /* Rimuove il padding predefinito */
     margin: 0; /* Rimuove il margine predefinito */
 }
+
 @media (max-width: 1200px) {
     #meteo {
         transform: translateX(100px); /* Sposta il meteo di 100px a destra */
@@ -294,14 +299,16 @@ header .btn-promo {
         height: auto; /* Mantiene le proporzioni */
     }
 }
-header .data{
+
+header .data {
     font-size: 13px;
     font-style: normal;
     font-weight: 600;
     line-height: 18px;
 }
+
 header .temperatura,
-header .localita{
+header .localita {
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
@@ -439,15 +446,16 @@ header .localita{
     font-weight: 900;
     font-size: 0.9rem;
     text-decoration: none !important; /* Rimuove la sottolineatura */
-    text-align: left !important; /* Allinea a sinistra */
-    ;
+    text-align: left !important; /* Allinea a sinistra */;
 }
+
 /* Allinea a sinistra il contenitore della testatina */
 .testatina-articolo {
     text-align: left !important; /* Allinea il contenuto a sinistra */
     display: block; /* Assicura che occupi tutta la larghezza disponibile */
     margin-left: 0; /* Rimuove eventuali margini a sinistra */
 }
+
 /* Stile per il titolo dell'articolo */
 .titolo-main a {
     text-decoration: none;
@@ -463,16 +471,22 @@ header .localita{
     padding: 0; /* Rimuove il padding */
     margin: 0; /* Rimuove il margine */
 }
+
 .approfondimenti li {
     display: inline; /* Assicura che gli elementi rimangano in linea */
 }
+
 .approfondimenti-col {
     text-align: left;
-     gap: 10px; /* Spaziatura tra gli elementi */
-     list-style: none; /* Rimuove i pallini */
-     padding: 0; /* Rimuove il padding */
-     margin: 0; /* Rimuove il margine */
- }
+    gap: 10px; /* Spaziatura tra gli elementi */
+    list-style: none; /* Rimuove i pallini */
+    padding: 0; /* Rimuove il padding */
+    margin: 0; /* Rimuove il margine */
+}
+
+.tags:hover {
+    color: #b3b3b3 !important; /* Colore di sfondo al passaggio del mouse */
+}
 
 /*corregge le caratteristiche del quadrato*/
 i.bi-square-fill {
@@ -481,14 +495,16 @@ i.bi-square-fill {
     margin-right: 5px; /* Aggiunge spazio tra il quadrato e il testo */
     vertical-align: middle; /* Allinea verticalmente il quadrato con il testo */
 }
+
 /* Stile per i tag sotto alle notizie */
-.tags{
+.tags {
     color: black !important; /* Colore del testo */
     font-size: 15px !important; /* Dimensione del testo */
     text-decoration: none !important; /* Rimuove la sottolineatura */
     vertical-align: baseline;
     font-weight: 500
 }
+
 /*allinea l'immagine della notizi a sinistra con il testo*/
 .area .row .item_content figure {
     text-align: left; /* Allinea il contenuto della figura a sinistra */
@@ -571,6 +587,7 @@ header.scrolled .d-flex {
         max-width: 100px; /* Riduce la larghezza massima */
     }
 }
+
 /*stili per strip-1-right*/
 /* affianca immagine e titolo */
 
@@ -631,7 +648,8 @@ header.scrolled .d-flex {
     line-height: normal;
     font-weight: bold;
 }
-.divider{
+
+.divider {
     margin-bottom: 30px;
 }
 
@@ -643,12 +661,12 @@ header.scrolled .d-flex {
 }
 
 
-.titolo-main-small{
+.titolo-main-small {
     line-height: 14px;
     text-align: left;
 }
 
-.titolo-main-small a{
+.titolo-main-small a {
     font-size: 1rem;
     text-decoration: none;
     color: black;
@@ -668,6 +686,37 @@ header.scrolled .d-flex {
     object-fit: cover; /* Mantiene le proporzioni e riempie il contenitore */
 }
 
+/*hover a tutti i titoli*/
 .titolo-hover a:hover {
     color: #b3b3b3 !important;
+}
+
+/* Stile per il titolo della sezione "Roma" */
+.roma a {
+    color: firebrick !important;
+    text-decoration: none !important;
+}
+
+.more a {
+    font-size: 1rem !important;
+}
+
+.roma-line {
+    margin: 20px 0;
+}
+
+.divider-red {
+    height: 1px; /* Altezza della linea */
+    background-color: firebrick; /* Colore della linea */
+    margin: 10px 0; /* Spaziatura sopra e sotto */
+    width: 100%; /* Larghezza della linea */
+}
+
+.roma-text {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+.mappa-text{
+    font-size: 0.8rem;
+    font-weight: 800;
 }
