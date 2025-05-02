@@ -741,22 +741,24 @@ header.scrolled .d-flex {
     margin-right: 1rem;
 }
 
-.nl-option-header{
+.nl-option-header {
     font-size: 1.2rem;
     font-weight: 900;
     color: black;
     text-align: left;
 }
-.intro{
+
+.intro {
     font-size: 1rem;
-    font-weight:400;
+    font-weight: 400;
 }
-.nl-content a{
+
+.nl-content a {
     text-decoration: none;
     color: black;
 }
 
-.nl-firma{
+.nl-firma {
     color: #2e77b8;
     font-size: 1rem;
     font-weight: 900;
@@ -771,6 +773,51 @@ header.scrolled .d-flex {
     line-height: normal;
 }
 
-.nl-title-hover:hover{
+.nl-title-hover:hover {
     color: #b3b3b3;
+}
+
+/*sezione giorno e notte*/
+.giorno-notte {
+    background-color: #2c497f;
+}
+
+.gn-back-white {
+    background-color: white;
+}
+
+.giorno-notte-text {
+    margin: 0.4rem;
+    color: #2c497f;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.divider-white {
+    height: 1px; /* Altezza della linea */
+    background-color: white; /* Colore della linea */
+    margin: 10px 0; /* Spaziatura sopra e sotto */
+    width: 100%; /* Larghezza della linea */
+}
+
+.gn-title a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    line-height: normal;
+}
+
+/*banner pubblicitario*/
+.adv_banner {
+    text-align: center;
+    background-color: #eee;
+    position: relative;
+}
+
+.adv_Native1 img {
+    width: 100%; /* Occupa tutta la larghezza disponibile */
+    height: 110px; /* Altezza fissa */
+    object-fit: cover; /* Mantiene le proporzioni ritagliando l'immagine se necessario */
 }

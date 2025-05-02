@@ -10,8 +10,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
-<!-- Aggiungi lo script che definisce CedSWV -->
-<script src="https://utils.cedsdigital.it/components/archivio_slider/archivio_slider.js?v1708337742" defer></script>
 <!-- Assicurati che il tuo script venga caricato dopo -->
 <script src="script.js" defer></script>
 <body>
@@ -368,7 +366,6 @@
 
                 <div class="strip-1-right divider">
                     <div class="row">
-                        <!-- html_base_right-452cd11 --- 2025-04-27 11:12:09 -->
                         <article class="col-xs-12 html_base_right vaticano ">
                             <div class="item_content">
                                 <div class="row middle-xs">
@@ -989,17 +986,17 @@
                         <div class="flex-grow-1 me-3 divider-white"></div>
                     </div>
                     <div class="row">
-                        <article class="col-xs-12 html_base_right gn-title ">
+                        <article class="col gn-title mx-3 mb-3">
                             <div class="item_content">
                                 <div class="row middle-xs">
-                                    <div class="col-xs-6">
-                                        <figure class="medium mb-3 ms-3"><a href="#"
+                                    <div class="col">
+                                        <figure class="medium"><a href="#"
                                                                   title="A teatro con i talenti del futuro"><img
                                                 src="https://statics.cedscdn.it/photos/MED/2025/04/26/8801217_OBJ59342063_15312.jpg"
                                                 title="A teatro con i talenti del futuro" width="404" height="221" alt="immagine media giorno notte"></a>
                                         </figure>
                                     </div>
-                                    <div class="col-xs-6">
+                                    <div class="col">
                                         <div class="valign__content">
                                             <div class="valign">
                                                 <h2 class="titolo-hover"><a href="#" class="ml_primary_link">A teatro
@@ -1014,8 +1011,44 @@
                 </div>
                 <div class="divider-dark"></div>
 
-                <div id="adv_MiniMasthead" class="adv_banner"></div>
+<!-- nuovo carosello di bootstrap non gira una sega-->
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://picsum.photos/495/221" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>CAROSELLO!</h5>
+                                <p>carosello slide 1</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/495/222" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>CAROSELLO!</h5>
+                                <p>carosello slide 2</p>
+                            </div>
 
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/495/220" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>CAROSELLO!</h5>
+                                <p>carosello slide 3</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <div class="divider-dark"></div>
+<!-- carosello vecchio
                 <script>
                     CedsWNV.watch(document.currentScript, () => loadScript(
                         "https://utils.cedsdigital.it/components/archivio_slider/archivio_slider.js?v1708337742"
@@ -1128,8 +1161,10 @@
                 .MOB_strip-archivio_slider #archivio_slider .Timeline-wrapper-HT .Timeline-controller .next-btn, .MOB_strip-archivio_slider #archivio_slider .Timeline-wrapper-HT .Timeline-controller .prev-btn {
                     top: 11px
                 }</style>
-
-                <div id="adv_Native1" class="adv_banner"></div>
+-->
+                <div id="adv_Native1" class="adv_Native1 border  mb-4">
+                    <a href="#" class="d-flex"><img src="" class="" alt="*advertisement*"/> </a>
+                </div>
 
             </div>
         </section>
