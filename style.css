@@ -716,7 +716,61 @@ header.scrolled .d-flex {
     font-weight: 900;
     font-size: 1.5rem;
 }
-.mappa-text{
+
+.mappa-text {
     font-size: 0.8rem;
     font-weight: 800;
+}
+
+/*stili della newsletter*/
+.strip-nl {
+    background-color: #e6eef6;
+}
+
+.newsletter {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: black;
+}
+
+.newsletter-div {
+    height: 1px; /* Altezza della linea */
+    background-color: #343a40; /* Colore della linea */
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.nl-option-header{
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: black;
+    text-align: left;
+}
+.intro{
+    font-size: 1rem;
+    font-weight:400;
+}
+.nl-content a{
+    text-decoration: none;
+    color: black;
+}
+
+.nl-firma{
+    color: #2e77b8;
+    font-size: 1rem;
+    font-weight: 900;
+    text-align: left;
+}
+
+/*non allinea il titolo a sinistra*/
+.nl-option-title {
+    text-align: left !important;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.nl-title-hover:hover{
+    color: #b3b3b3;
 }
