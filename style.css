@@ -897,3 +897,29 @@ header.scrolled .d-flex {
 .cr-sml-txt{
 font-weight: 700 !important;
 }
+.lower-ico {
+    width: 50px; /* Diametro del cerchio */
+    height: 50px; /* Diametro del cerchio */
+    position: absolute;
+    top: 75%; /* Allinea alla linea bianca */
+    transform: translateY(-50%);
+    z-index: 10; /* Assicura che siano visibili sopra gli altri elementi */
+    border: none; /* Rimuove eventuali bordi */
+}
+
+.carousel-control-prev-icon {
+    left: 3%; /* Posiziona il bottone a sinistra */
+    filter: brightness(0) invert(1); /* Rende l'icona visibile su sfondo scuro */
+}
+
+.carousel-control-next-icon {
+    right: 3%; /* Posiziona il bottone a destra */
+    filter: brightness(0) invert(1); /* Rende l'icona visibile su sfondo scuro */
+}
+.carousel-control-prev {
+    left: 3%; /* Posiziona il bottone a sinistra */
+}
+
+.carousel-control-next {
+    right: 3%; /* Posiziona il bottone a destra */
+}
