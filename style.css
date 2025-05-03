@@ -759,7 +759,7 @@ header.scrolled .d-flex {
 }
 
 .nl-firma {
-    color: #2e77b8;
+    color: #1F507A;
     font-size: 1rem;
     font-weight: 900;
     text-align: left;
@@ -820,4 +820,80 @@ header.scrolled .d-flex {
     width: 100%; /* Occupa tutta la larghezza disponibile */
     height: 110px; /* Altezza fissa */
     object-fit: cover; /* Mantiene le proporzioni ritagliando l'immagine se necessario */
+}
+
+/*carosello*/
+.accadeoggi-btn{
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+.ao-back-black{
+    background-color: black;
+}
+.accadeoggi-txt{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 800;
+}
+.archivio{
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: black;
+    text-align: right;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.bi-chevron-right{
+    font-size: 0.6rem !important; /* Riduci la dimensione dell'icona */
+    font-weight: 900 !important;
+}
+.carousel-caption{
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+.carousel-horizontal-line {
+    position: absolute;
+    bottom: 25%; /* Posiziona la linea a 1/4 dal fondo */
+    left: 0;
+    width: 100%; /* Larghezza completa */
+    height: 2px; /* Altezza della linea */
+    background-color: white; /* Colore bianco */
+    z-index: 10; /* Assicura che sia visibile sopra gli altri elementi */
+    display: flex; /* Layout flessibile per posizionare le icone */
+    justify-content: space-between; /* Distribuisce le icone equidistanti */
+    align-items: center; /* Allinea verticalmente le icone */
+    padding: 0 10%; /* Spaziatura dai bordi laterali */
+}
+
+.carousel-horizontal-line i {
+    color: white; /* Colore delle icone */
+    font-size: 1rem; /* Dimensione delle icone */
+}
+.icon-center{
+    font-size: 4.5rem !important;
+    color: firebrick !important;
+}
+.icon-center .icon-text {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra orizzontalmente */
+    transform: translate(-50%, -50%); /* Centra esattamente */
+    font-size: 0.8rem; /* Dimensione del testo */
+    color: white; /* Colore del testo */
+    font-weight: bold; /* Testo in grassetto */
+    text-align: center; /* Allinea il testo */
+}
+.cr-bg-txt{
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+
+}
+.cr-sml-txt{
+font-weight: 700 !important;
 }
