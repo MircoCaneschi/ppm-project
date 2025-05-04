@@ -207,7 +207,7 @@ header .btn-promo {
 }
 
 .area .row .item_content h2.titolo a {
-    color: black !important; /* Colore del testo */
+    color: black ; /* Colore del testo */
     font-size: 15px !important; /* Dimensione del testo */
     text-decoration: none !important; /* Rimuove la sottolineatura */
     vertical-align: baseline;
@@ -796,7 +796,6 @@ header.scrolled .d-flex {
 .divider-white {
     height: 1px; /* Altezza della linea */
     background-color: white; /* Colore della linea */
-    margin: 10px 0; /* Spaziatura sopra e sotto */
     width: 100%; /* Larghezza della linea */
 }
 
@@ -922,4 +921,27 @@ font-weight: 700 !important;
 
 .carousel-control-next {
     right: 3%; /* Posiziona il bottone a destra */
+}
+
+/*-----------------------stili della colonna di sinistra---------------------------*/
+@media (max-width: 992px) {
+    .divider-vertical {
+        display: none; /* Nasconde il divisore verticale su schermi piccoli */
+    }
+}
+/*myPlay*/
+.myplay{
+    background-color: #5f5f5f;
+}
+.titolo-bianco a{
+    color: white !important;
+}
+.divider-white-margin{
+    height: 1px;
+    background-color: white;
+    margin: 0 auto; /* Centra la linea */
+    width: 95%; /* Imposta un margine laterale per rientrare nello sfondo */
+}
+.middle-xs{
+    --bs-gutter-x: 0;
 }
