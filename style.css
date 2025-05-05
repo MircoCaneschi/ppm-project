@@ -207,17 +207,19 @@ header .btn-promo {
 }
 
 .titolo a {
-    color: black ; /* Colore del testo */
+    color: black; /* Colore del testo */
     font-size: 15px !important; /* Dimensione del testo */
     text-decoration: none !important; /* Rimuove la sottolineatura */
     vertical-align: baseline;
 }
+
 .titolo label {
-    color: black ; /* Colore del testo */
+    color: black; /* Colore del testo */
     font-size: 15px !important; /* Dimensione del testo */
     text-decoration: none !important; /* Rimuove la sottolineatura */
     vertical-align: baseline;
 }
+
 .titolo label:hover {
     color: black !important;
 }
@@ -429,7 +431,6 @@ header .localita {
     flex: 0 0 25%; /* Occupa il 25% della larghezza */
     max-width: 25%;
 }
-
 
 
 /* Adattamento per schermi piccoli */
@@ -827,22 +828,25 @@ header.scrolled .d-flex {
 }
 
 /*carosello*/
-.accadeoggi-btn{
+.accadeoggi-btn {
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
 }
-.ao-back-black{
+
+.ao-back-black {
     background-color: black;
 }
-.accadeoggi-txt{
+
+.accadeoggi-txt {
     text-transform: uppercase;
     font-size: 1.2rem;
     color: white;
     font-weight: 800;
 }
-.archivio{
+
+.archivio {
     font-size: 0.8rem;
     font-weight: 800;
     color: black;
@@ -850,17 +854,20 @@ header.scrolled .d-flex {
     text-decoration: none;
     text-transform: uppercase;
 }
-.bi-chevron-right{
+
+.bi-chevron-right {
     font-size: 0.6rem !important; /* Riduci la dimensione dell'icona */
     font-weight: 900 !important;
 }
-.carousel-caption{
+
+.carousel-caption {
     font-weight: bold;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
 }
+
 .carousel-horizontal-line {
     position: absolute;
     bottom: 25%; /* Posiziona la linea a 1/4 dal fondo */
@@ -879,10 +886,12 @@ header.scrolled .d-flex {
     color: white; /* Colore delle icone */
     font-size: 1rem; /* Dimensione delle icone */
 }
-.icon-center{
+
+.icon-center {
     font-size: 4.5rem !important;
     color: firebrick !important;
 }
+
 .icon-center .icon-text {
     position: absolute;
     top: 50%; /* Centra verticalmente */
@@ -893,14 +902,17 @@ header.scrolled .d-flex {
     font-weight: bold; /* Testo in grassetto */
     text-align: center; /* Allinea il testo */
 }
-.cr-bg-txt{
+
+.cr-bg-txt {
     font-weight: 700 !important;
     font-size: 1.5rem !important;
 
 }
-.cr-sml-txt{
-font-weight: 700 !important;
+
+.cr-sml-txt {
+    font-weight: 700 !important;
 }
+
 .lower-ico {
     width: 50px; /* Diametro del cerchio */
     height: 50px; /* Diametro del cerchio */
@@ -920,6 +932,7 @@ font-weight: 700 !important;
     right: 3%; /* Posiziona il bottone a destra */
     filter: brightness(0) invert(1); /* Rende l'icona visibile su sfondo scuro */
 }
+
 .carousel-control-prev {
     left: 3%; /* Posiziona il bottone a sinistra */
 }
@@ -939,19 +952,22 @@ font-weight: 700 !important;
         flex-wrap: nowrap; /* Impedisce che le colonne vadano a capo su schermi xl */
     }
 }
+
 @media (max-width: 1000px) {
     #main-content, #right-rail {
         flex: 0 0 100%; /* Ogni colonna occupa il 100% della larghezza */
         max-width: 100%; /* Limita la larghezza massima */
     }
 }
-.right-title{
+
+.right-title {
     font-size: 1rem !important;
     font-weight: 900 !important;
     text-transform: uppercase !important;
     text-align: left !important;
 }
-.right-title a{
+
+.right-title a {
     font-size: 1rem !important;
     font-weight: 900 !important;
     text-transform: uppercase !important;
@@ -959,61 +975,69 @@ font-weight: 700 !important;
 }
 
 /*myPlay*/
-.myplay{
+.myplay {
     background-color: #5f5f5f;
 }
-.titolo-bianco a{
+
+.titolo-bianco a {
     color: white !important;
 }
-.divider-white-margin{
+
+.divider-white-margin {
     height: 1px;
     background-color: white;
     margin: 0 auto; /* Centra la linea */
     width: 95%; /* Imposta un margine laterale per rientrare nello sfondo */
 }
-.middle-xs{
+
+.middle-xs {
     --bs-gutter-x: 0;
 }
 
 /*advetisement*/
-.thinAD{
-height: 600px;
+.thinAD {
+    height: 600px;
 }
 
 /*articoli alternati*/
-.art-dispari{
+.art-dispari {
     background-color: #f3f2f2;
 }
-.art-pari{
+
+.art-pari {
     background-color: white;
 }
 
-.alt-text{
+.alt-text {
     line-height: 0.8rem;
 }
-.art-pari .col-img{
+
+.art-pari .col-img {
     text-align: right;
 }
+
 /*social*/
-@media(max-width: 1400px) {
+@media (max-width: 1400px) {
     .social-ico {
         display: flex;
         flex-wrap: wrap; /* Permette alle icone di andare a capo */
         justify-content: space-evenly;
     }
+
     .social-ico .col {
         width: 47px;
         height: 47px;
         text-align: center; /* Centra il contenuto all'interno della colonna */
     }
 }
-@media(min-width: 1400px) {
+
+@media (min-width: 1400px) {
     .social-ico {
         flex-wrap: nowrap;
     }
 }
 
-.social{
+.social {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.2rem;
@@ -1021,19 +1045,21 @@ height: 600px;
 }
 
 /*messaggero tv*/
-.messaggeroTV{
+.messaggeroTV {
     background-color: #5f5f5f;
 }
-.notizia-vid{
+
+.notizia-vid {
     font-weight: bold;
     line-height: normal;
 }
 
 /*opinioni del messaggero*/
-.back-gnd{
+.back-gnd {
     background-color: #e4e3e3;
 }
-.opinionista{
+
+.opinionista {
     color: firebrick;
     font-weight: 900;
     font-size: 0.8rem;
@@ -1043,30 +1069,35 @@ height: 600px;
 }
 
 /*newsletter side*/
-.iscriviti{
+.iscriviti {
     font-weight: 900;
 }
-#email-module{
+
+#email-module {
     flex-wrap: nowrap;
 }
+
 .card {
     height: 40px; /* Imposta un'altezza specifica */
     overflow: hidden; /* Assicurati che il contenuto non esca */
     border-radius: 0;
 }
-.card-body{
+
+.card-body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: left;
     align-self: center;
 }
-.iscriviti-btn{
+
+.iscriviti-btn {
     text-transform: uppercase;
     font-weight: 900;
     border-color: #1f507a !important;
 
 }
+
 .iscriviti-btn:hover {
     background-color: #1f507a !important; /* Mantiene il colore di sfondo originale */
     border-color: #1f507a !important;
@@ -1080,33 +1111,46 @@ height: 600px;
     margin: 0; /* Rimuove eventuali margini */
     padding: 0;
 }
-.btn-primary{
+
+.btn-primary {
     background-color: #1F507A;
     border-radius: 0;
- }
+}
 
 /*podcast*/
-#podcast-bar{
+#podcast-bar {
     flex-wrap: nowrap;
 }
 
-/*
-.podcast-article::before{
-    content: "U+F4F3";
-    font-family: "bootstrap-icons";
-    font-size: 16px;
-    margin-right: 8px;
+.podcast-text a{
+    font-size: 1.1rem !important;
+    line-height:1rem !important ;
 }
-.bi-play-circle{
+.podcast-text a:hover {
+    color: #b3b3b3;
+}
+.podcast-article {
+    display: flex; /* Rende l'articolo un contenitore flex */
+    align-items: center; /* Allinea verticalmente gli elementi al centro */
+}
+.podcast-article a{
+    line-height: normal;
+}
+.pc-bkg{
+    background-color: #f8f7f7;
+}
+
+
+.bi-play-circle {
     font-size: 1.3rem;
     color: firebrick;
+    margin-right: 10px; /* Spazio tra l'icona e il testo */
 }
- */
 
 
 /*footer*/
 
-.section{
+.section {
     font-size: 1rem;
     font-weight: 900;
     text-align: left;
@@ -1123,6 +1167,7 @@ height: 600px;
 .inline-dropdown-toggle:checked + .inline-dropdown-menu {
     max-height: 300px; /* Imposta un'altezza massima approssimativa */
 }
+
 .nav-link:hover {
 
 }
