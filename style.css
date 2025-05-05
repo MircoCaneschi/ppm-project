@@ -212,6 +212,15 @@ header .btn-promo {
     text-decoration: none !important; /* Rimuove la sottolineatura */
     vertical-align: baseline;
 }
+.titolo label {
+    color: black ; /* Colore del testo */
+    font-size: 15px !important; /* Dimensione del testo */
+    text-decoration: none !important; /* Rimuove la sottolineatura */
+    vertical-align: baseline;
+}
+.titolo label:hover {
+    color: black !important;
+}
 
 /* Posiziona l'icona vettoriale sopra l'immagine della notizia */
 .area .row .item_content figure .info-item {
@@ -936,6 +945,18 @@ font-weight: 700 !important;
         max-width: 100%; /* Limita la larghezza massima */
     }
 }
+.right-title{
+    font-size: 1rem !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    text-align: left !important;
+}
+.right-title a{
+    font-size: 1rem !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    text-align: left !important;
+}
 
 /*myPlay*/
 .myplay{
@@ -972,4 +993,136 @@ height: 600px;
 }
 .art-pari .col-img{
     text-align: right;
+}
+/*social*/
+@media(max-width: 1400px) {
+    .social-ico {
+        display: flex;
+        flex-wrap: wrap; /* Permette alle icone di andare a capo */
+        justify-content: space-evenly;
+    }
+    .social-ico .col {
+        width: 47px;
+        height: 47px;
+        text-align: center; /* Centra il contenuto all'interno della colonna */
+    }
+}
+@media(min-width: 1400px) {
+    .social-ico {
+        flex-wrap: nowrap;
+    }
+}
+
+.social{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+/*messaggero tv*/
+.messaggeroTV{
+    background-color: #5f5f5f;
+}
+.notizia-vid{
+    font-weight: bold;
+    line-height: normal;
+}
+
+/*opinioni del messaggero*/
+.back-gnd{
+    background-color: #e4e3e3;
+}
+.opinionista{
+    color: firebrick;
+    font-weight: 900;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    text-align: left;
+    text-decoration: none;
+}
+
+/*newsletter side*/
+.iscriviti{
+    font-weight: 900;
+}
+#email-module{
+    flex-wrap: nowrap;
+}
+.card {
+    height: 40px; /* Imposta un'altezza specifica */
+    overflow: hidden; /* Assicurati che il contenuto non esca */
+    border-radius: 0;
+}
+.card-body{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    align-self: center;
+}
+.iscriviti-btn{
+    text-transform: uppercase;
+    font-weight: 900;
+    border-color: #1f507a !important;
+
+}
+.iscriviti-btn:hover {
+    background-color: #1f507a !important; /* Mantiene il colore di sfondo originale */
+    border-color: #1f507a !important;
+}
+
+#email-module {
+    gap: 5px; /* Riduce lo spazio tra le colonne */
+}
+
+#email-module .col {
+    margin: 0; /* Rimuove eventuali margini */
+    padding: 0;
+}
+.btn-primary{
+    background-color: #1F507A;
+    border-radius: 0;
+ }
+
+/*podcast*/
+#podcast-bar{
+    flex-wrap: nowrap;
+}
+
+/*
+.podcast-article::before{
+    content: "U+F4F3";
+    font-family: "bootstrap-icons";
+    font-size: 16px;
+    margin-right: 8px;
+}
+.bi-play-circle{
+    font-size: 1.3rem;
+    color: firebrick;
+}
+ */
+
+
+/*footer*/
+
+.section{
+    font-size: 1rem;
+    font-weight: 900;
+    text-align: left;
+    text-transform: uppercase;
+    color: black;
+}
+
+.inline-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.inline-dropdown-toggle:checked + .inline-dropdown-menu {
+    max-height: 300px; /* Imposta un'altezza massima approssimativa */
+}
+.nav-link:hover {
+
 }
