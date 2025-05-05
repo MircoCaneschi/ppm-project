@@ -1,34 +1,1269 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js" defer></script>
 <body>
-<header class="p-3 text-bg-dark">
+<div id="sidebar" class="sidebar flex-shrink-0 p-3">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <a href="/" class="d-flex align-items-center text-decoration-none">
+            <img src="logoMini.png" alt="Logo" class="logo-mini me-2">
+        </a>
+        <button id="closeSidebar" class="btn btn-secondary" aria-label="Chiudi sidebar">
+            <i class="bi bi-x"></i>
+        </button>
+    </div>
+    <div class="search-bar mb-3">
+        <form class="d-flex align-items-center position-relative" role="search" aria-label="Barra di ricerca">
+            <input type="text" class="form-control search-input" placeholder="Cerca nel sito"
+                   aria-label="Cerca nel sito">
+            <button type="submit" class="search-icon-btn" aria-label="Invia ricerca">
+                <i class="bi bi-search"></i>
+            </button>
+        </form>
+    </div>
+    <div class="divider-dark"></div>    <!-- Division between sections -->
+
+    <ul class="list-unstyled ps-0">
+        <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                Home <i class="bi bi-chevron-right"></i>
+            </button>
+            <div class="collapse" id="home-collapse" style="">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Reports</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                Dashboard
+            </button>
+            <div class="collapse" id="dashboard-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Monthly</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                Orders
+            </button>
+            <div class="collapse" id="orders-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New</a></li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Processed</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Shipped</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="border-top my-3"></li>
+        <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                Account
+            </button>
+            <div class="collapse" id="account-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a>
+                    </li>
+                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign out</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<header class="px-3 pb-3 text-bg-white">
     <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-            </a>
+        <nav aria-label="Barra di navigazione principale">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-            </ul>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 text-dark" id="openSidebar" aria-label="menù"><i
+                            class="fas fa-bars big-icon" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="nav-link px-2 text-secondary" id="searchSidebar" aria-label="cerca"><i
+                            class="bi bi-search big-icon" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="nav-link px-2 text-dark nav-linkLight">PERSONE</a></li>
+                    <li><a href="#" class="nav-link px-2 text-dark nav-linkLight">SCHEDE</a></li>
+                    <li><a href="#" class="nav-link px-2 text-dark nav-linkLight">ARCHIVIO</a></li>
+                </ul>
+
+                <div class="text-end d-flex align-items-center gap-2">
+                    <a href="#" class="nav-link px-2 text-dark" aria-label="notifiche"><i
+                            class="bi bi-bell big-icon me-2"
+                            aria-hidden="true"></i></a>
+
+                    <button type="button" class="btn btn-notizie me-2 nav-link"><i class="bi bi-pin-angle-fill me-2 "
+                                                                                   aria-hidden="true"></i> LE TUE
+                        NOTIZIE
+                    </button>
+                    <button type="button" class="btn btn-promo me-2 nav-link">PROMO FLASH</button>
+                    <a href="#" class="nav-link px-2 text-dark"><i class="bi bi-person big-icon me-2"
+                                                                   aria-hidden="true"></i>
+                        ACCEDI</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 
 
-            <div class="text-end">
-                <button type="button" class="btn btn-warning">LE TUE NOTIZIE</button>
-                <button type="button" class="btn btn-warning">PROMO FLASH</button>
-                <button type="button" class="btn btn-warning">ACCEDI</button>
+    <div class="divider-light container"></div>
+
+
+    <div class="header-middle">
+        <!-- <div class="wrapper container-fluid"> -->
+        <div class="header-middle__content">
+            <div class="row middle-xs">
+                <div class="col-xs center" aria-label="Logo principale">
+                    <div class="msg-logo">
+                        <a href="#" title="Il Messaggero">
+                            <img src="logoBig.jpeg" alt="Il Messaggero" class="logoBig">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs right" aria-label="Meteo e data">
+                    <div class="container">
+                        <ul id="meteo">
+                            <li class="data">
+                                <time>Mercoledì 23 Aprile</time>
+                                agg. alle
+                                <time datetime="2025-04-23T13:45:14">13:45</time>
+                            </li>
+                            <li>
+                                <span class="icon"><a href="#" title="Meteo"><img
+                                        src="https://statics.cedscdn.it/ilmessaggero.it/img/icone_meteo/sole.svg"
+                                        width="16" height="16" alt="meteo"></a></span>
+                                <span class="temperatura"><a href="#" class="dark-link" title="Meteo">19.9 °C</a></span>
+                                <span class="localita"><a href="#" class="dark-link" title="Meteo">Roma</a></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</header></body>
+    <div class="header-bottom">
+        <div class="divider-light container"></div>
+        <div class="header-bottom__content">
+            <div class="header-menu__content">
+                <div class="row middle-xs">
+                    <div class="col-xs">
+                        <nav class="home-header__menu">
+                            <!-- topics-d500c5e --- 2025-04-24 15:57:03 -->
+                            <ul class="topics">
+                                <li>
+                                    <a target="_self" href="#">Papa Francesco funerali</a>
+                                </li>
+                                <li>
+                                    <a target="_self" href="#">Conclave</a>
+                                </li>
+                                <li>
+                                    <a target="_self" href="#">Graziano Fiorita</a>
+                                </li>
+                                <li>
+                                    <a target="_self" href="#">Guerra Ucraina</a>
+                                </li>
+                                <li>
+                                    <a target="_self" href="#">Stipendi</a>
+                                </li>
+                                <li>
+                                    <a target="_self" href="#">Maria Teresa Ruta</a>
+                                </li>
+                            </ul>
+                            <!-- TIME TO SERVE CACHED topics-d500c5e: 0.00050997734069824 -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider-light container"></div>
+    </div>
+</header>
+
+
+<!-- Main content area -->
+<main class=" container">
+    <div class="area top full" data-id="501" data-nome="Top Home 2023">
+        <div class="strip-4-bottom">
+            <div class="row">
+                <article class="col-xs-3 html_base_bottom vaticano ">
+                    <div class="item_content">
+                        <figure class="panorama"><a
+                                href="#"
+                                title="La macchia sul volto del Papa? La neurologa: «Ipotesi trauma da caduta»"><img
+                                src="https://picsum.photos/233/80"
+                                title="La macchia sul volto del Papa? La neurologa: «Ipotesi trauma da caduta»"
+                                width="299" height="103" alt="immagine piccola"></a>
+                            <ul class="info-item"> <!--this thing points that there is the red icon-->
+                                <li class="has-trend" title="Notizia di tendenza">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <g>
+                                                <rect width="26" height="26" fill="#B22222" rx="2"></rect>
+                                                <g>
+                                                    <path d="M0 0L19 0 19 19 0 19z" transform="translate(3 4)"></path>
+                                                    <path fill="#FFF" fill-rule="nonzero"
+                                                          d="M13.536 6.654L10.857 4.071 17.643 4.071 17.643 10.857 15.059 8.151 10.211 13.049 7.332 10.17 3.097 14.354 1.574 12.857 7.332 7.099 10.211 9.979z"
+                                                          transform="translate(3 4)"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </li>
+                            </ul>
+                        </figure>
+                        <h2 class="titolo">
+                            <a href="#" class="">La macchia sul volto del Papa? La neurologa: «Ipotesi trauma da
+                                caduta»</a>
+                            <a href="#" class=""><br>
+                                <u>La «facies hippocratica»</u>
+                            </a>
+                            <a href="#" class="dark-link">Cosa è</a>
+                        </h2>
+                        <span class="firma"><span>di Alessandro Rosi</span></span></div>
+                </article>
+                <article class="col-xs-3 html_base_bottom  vaticano ">
+                    <div class="item_content">
+                        <figure class="panorama"><a
+                                href="#"
+                                title="Così saranno i funerali: una sola bara e nessun catafalco, il rito semplificato in 3 stazioni"><img
+                                src="https://picsum.photos/233/80"
+                                title="Così saranno i funerali: una sola bara e nessun catafalco, il rito semplificato in 3 stazioni"
+                                width="299" height="103" alt="immagine piccola"></a></figure>
+                        <h2 class="titolo"><a
+                                href="#"
+                                class="ml_primary_link">Così saranno i funerali: una sola bara e nessun catafalco, il
+                            rito semplificato in 3 stazioni</a></h2><span
+                            class="firma"><span>di Mauro Evangelisti</span></span></div>
+                </article>
+                <article class="col-xs-3 html_base_bottom  salute schede ">
+                    <div class="item_content">
+                        <figure class="panorama"><a
+                                href="#"
+                                title="Facies Ippocratica, cosa è e quali sono i segni della morte imminente. Bassetti: «Sul volto del Papa già a Pasqua»"><img
+                                src="https://picsum.photos/234/81"
+                                title="Facies Ippocratica, cosa è e quali sono i segni della morte imminente. Bassetti: «Sul volto del Papa già a Pasqua»"
+                                width="299" height="103" alt="immagine piccola"></a>
+                            <ul class="info-item">
+                                <li class="has-trend" title="Notizia di tendenza">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <g>
+                                                <rect width="26" height="26" fill="#B22222" rx="2"></rect>
+                                                <g>
+                                                    <path d="M0 0L19 0 19 19 0 19z" transform="translate(3 4)"></path>
+                                                    <path fill="#FFF" fill-rule="nonzero"
+                                                          d="M13.536 6.654L10.857 4.071 17.643 4.071 17.643 10.857 15.059 8.151 10.211 13.049 7.332 10.17 3.097 14.354 1.574 12.857 7.332 7.099 10.211 9.979z"
+                                                          transform="translate(3 4)"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </li>
+                            </ul>
+                        </figure>
+                        <h2 class="titolo"><a
+                                href="#"
+                                class="ml_primary_link">Facies Ippocratica, cosa è e quali sono i segni della morte
+                            imminente. Bossetti: «Sul volto del Papa già a Pasqua»</a></h2><span class="firma">di Redazione web</span>
+                    </div>
+                </article>
+                <article class="col-xs-3 html_base_bottom  vaticano ">
+                    <div class="item_content">
+                        <figure class="panorama"><a
+                                href="#"
+                                title="Le ultime ore, il medico Alfieri: «Quando sono arrivato era in coma con gli occhi aperti, non è stata fatta la Tac»"><img
+                                src="https://picsum.photos/232/80"
+                                title="Le ultime ore, il medico Alfieri: «Quando sono arrivato era in coma con gli occhi aperti, non è stata fatta la Tac»"
+                                width="299" height="103" alt="immagine piccola"></a></figure>
+                        <h2 class="titolo"><a
+                                href="#"
+                                class="ml_primary_link">Le ultime ore, il medico Alfieri: «Quando sono arrivato era in
+                            coma con gli occhi aperti, non è stata fatta la Tac»</a></h2><span class="firma">di Redazione web</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="divider-light container"></div>
+    </div>
+    <div id="colonne-big" class="row ">
+        <section id="main-content" class="col-12 col-lg-8 border-end">
+            <!-- AREA "main"  area-502 -->
+            <div class="area main hp-no-bottom-margin" data-id="502" data-nome="Main Home 2023">
+
+
+                <div class="strip-combo divider">
+                    <div class="standard">
+                        <div class="strip-1-top principale">
+                            <div class="row">
+                                <article class="col-xs-12 html_base_top italia ">
+                                    <div class="item_content">
+                                        <span class="testatina testatina-articolo"><a href="#"
+                                                                                      class="">PALERMO</a></span>
+                                        <h2 class="titolo-main titolo-hover"><a href="#" class="ml_primary_link">Sparatoria
+                                            nella
+                                            notte a Monreale, 3 morti e 2 feriti<br>
+                                            La rissa in piazza, poi i colpi:</a> <a href="#" class="ml_articolo"><u>chi
+                                            erano le vittime</u></a></h2><span class="firma">di Redazione web</span>
+                                        <figure class="panorama"><a href="#"
+                                                                    title="Sparatoria nella notte a Monreale, 3 morti e 2 feriti La rissa in piazza, poi i colpi:"><img
+                                                src="https://picsum.photos/824/283"
+                                                title="Sparatoria nella notte a Monreale, 3 morti e 2 feriti La rissa in piazza, poi i colpi:"
+                                                width="824" height="283" alt="immagine grossa"></a>
+                                        </figure>
+                                        <aside>
+                                            <ul class="approfondimenti">
+                                                <li><i class="bi bi-square-fill"></i><a href="#" class="tags"
+                                                                                        title="Morto Alberto Franceschini">Morto
+                                                    Alberto
+                                                    Franceschini</a></li>
+                                                <li><i class="bi bi-square-fill"></i>
+                                                    <a href="#" class="tags" title="Foto">Foto</a></li>
+                                            </ul>
+                                        </aside>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider-dark-spaced"></div>
+
+                <div class="strip-1-right divider">
+                    <div class="row">
+                        <article class="col-xs-12 html_base_right vaticano ">
+                            <div class="item_content">
+                                <div class="row middle-xs">
+                                    <div class="col-xs-6">
+                                        <figure class="medium"><a href="#"
+                                                                  title="Conclave, la sigla di Francesco sul documento che esclude Becciu: l'atto per impedirgli il voto firmato con una &quot;F&quot; il 24 marzo"><img
+                                                src="https://picsum.photos/495/221"
+                                                title="Conclave, la sigla di Francesco sul documento che esclude Becciu: l'atto per impedirgli il voto firmato con una &quot;F&quot; il 24 marzo"
+                                                width="495" height="221" alt="immagine media"></a>
+                                            <ul class="info-item">
+                                                <li class="has-trend" title="Notizia di tendenza">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                         viewBox="0 0 26 26">
+                                                        <g fill="none" fill-rule="evenodd">
+                                                            <g>
+                                                                <rect width="26" height="26" fill="#B22222"
+                                                                      rx="2"></rect>
+                                                                <g>
+                                                                    <path d="M0 0L19 0 19 19 0 19z"
+                                                                          transform="translate(3 4)"></path>
+                                                                    <path fill="#FFF" fill-rule="nonzero"
+                                                                          d="M13.536 6.654L10.857 4.071 17.643 4.071 17.643 10.857 15.059 8.151 10.211 13.049 7.332 10.17 3.097 14.354 1.574 12.857 7.332 7.099 10.211 9.979z"
+                                                                          transform="translate(3 4)"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </li>
+                                            </ul>
+                                        </figure>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="valign__content">
+                                            <div class="valign">
+                                                <span class="testatina testatina-articolo"><a href="#">IL RETROSCENA</a></span>
+                                                <h2 class="titolo-main-medium titolo-hover"><a href="#"
+                                                                                               class="ml_primary_link">Conclave,
+                                                    la
+                                                    sigla di Francesco sul documento che esclude Becciu: l'atto per
+                                                    impedirgli il voto firmato con una "F" il 24 marzo</a></h2>
+                                                <aside>
+                                                    <ul class="approfondimenti">
+                                                        <li><i class="bi bi-square-fill"></i><a href="#" class="tags"
+                                                                                                title="Foto">Foto</a>
+                                                        </li>
+                                                        <li><i class="bi bi-square-fill"></i><a href="#" class="tags"
+                                                                                                title="Cosa succede ora?">Cosa
+                                                            succede ora?</a>
+                                                        </li>
+                                                    </ul>
+                                                </aside>
+                                                <span class="firma"><span>di Andrea Gagliarducci</span></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="divider-dark-spaced"></div>
+
+                <div class="strip-1-top divider">
+                    <div class="row">
+                        <article class="col-xs-12 html_base_top vaticano ">
+                            <div class="item_content">
+                                <span class="testatina testatina-articolo"><a href="#">PROVE DI PACE</a></span>
+                                <h2 class="titolo-main titolo-hover"><a href="#" class="ml_primary_link">Trump-Zelensky,
+                                    dallo studio
+                                    ovale a San Pietro<br>
+                                    Il gesto a Macron e il piano di Kiev per la tregua</a> <a href="#"
+                                                                                              class="ml_articolo"><br>
+                                    <u>E Donald su Putin:&nbsp;«Forse mi prende in giro»</u></a> <a href="#"
+                                                                                                    class="ml_photogallery">Foto</a>
+                                </h2><span class="firma"><span>di Marco Ventura</span></span>
+                                <figure class="medium"><a
+                                        href="/vaticano/trump_zelensky_cosa_e_successo_giallo_terza_sedia_macron_allontanato_proposte_di_pace_attacco_a_putin-8801312.html"
+                                        title="Trump-Zelensky, dallo studio ovale a San Pietro Il gesto a Macron e il piano di Kiev per la tregua"><img
+                                        src="https://statics.cedscdn.it/photos/MED_HIGH/2025/04/26/8801312_26220255_trump_zelensky.jpg"
+                                        title="Trump-Zelensky, dallo studio ovale a San Pietro Il gesto a Macron e il piano di Kiev per la tregua"
+                                        width="824" height="450" alt="immagine grande"></a></figure>
+                                <aside>
+                                    <ul class="approfondimenti">
+                                        <li><i class="bi bi-square-fill"></i>
+                                            <a href="#" class="tags"
+                                               title="Putin annuncia riconquista del Kursk">Putin annuncia riconquista
+                                                del Kursk</a></li>
+                                        <li><i class="bi bi-square-fill"></i><a href="#" class="tags"
+                                                                                title="Il protocollo dei funerali violato dal Vaticano">Il
+                                            protocollo dei funerali violato dal Vaticano</a></li>
+                                    </ul>
+                                </aside>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="divider-dark-spaced"></div>
+
+                <div class="strip-2-fotina ratio-4-3 divider">
+                    <div class="row ">
+                        <article class="col">
+                            <div class="item_content">
+                                <h2 class="titolo-main-medium titolo-hover"><a href="#" class="ml_primary_link">Frosinone,
+                                    auto in avaria
+                                    sull’A1: donna travolta e uccisa il giorno prima del suo compleanno</a></h2>
+                                <div class="row">
+                                    <div class="col-lg-7 col-md-12">
+                                        <div class="valign">
+                                            <figure class="medium"><a href="#"
+                                                                      title="Frosinone, auto in avaria sull’A1: donna travolta e uccisa il giorno prima del suo compleanno"><img
+                                                    src="https://picsum.photos/405/221"
+                                                    title="Frosinone, auto in avaria sull’A1: donna travolta e uccisa il giorno prima del suo compleanno"
+                                                    width="404" height="221" alt="immagine piccola"></a></figure>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-12">
+                                        <div class="valign__content">
+                                            <div class="valign">
+                                                <span class="firma"><span>di Marin Mingarelli</span></span>
+                                                <aside>
+                                                    <ul class="approfondimenti-col">
+                                                        <li><i class="bi bi-square-fill "></i><a href="#" class="tags "
+                                                                                                 title="Cosa è successo">Cosa
+                                                            è successo</a></li>
+                                                        <li><i class="bi bi-square-fill "></i><a href="#" class="tags "
+                                                                                                 title="L'incidente">L'incidente</a>
+                                                        </li>
+                                                    </ul>
+                                                </aside>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <div class="divider-vertical-dark"></div>
+                        <article class="col">
+                            <div class="item_content">
+                                <h2 class="titolo-main-medium titolo-hover"><a href="#" class="ml_primary_link">Ragazzini
+                                    cadono dal tetto
+                                    di un
+                                    casolare abbandonato a Mazara del Vallo: morto un 14enne, gravissimo l'amico</a>
+                                </h2>
+                                <div class="row">
+                                    <div class="col-lg-7 col-md-12">
+                                        <div class="valign">
+                                            <figure class="medium"><a href="#"
+                                                                      title="Ragazzini cadono dal tetto di un casolare abbandonato a Mazara del Vallo: morto un 14enne, gravissimo l'amico"><img
+                                                    src="https://picsum.photos/264/145"
+                                                    title="Ragazzini cadono dal tetto di un casolare abbandonato a Mazara del Vallo: morto un 14enne, gravissimo l'amico"
+                                                    width="404" height="221" alt="immagine piccola"></a></figure>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-12">
+                                        <div class="valign__content">
+                                            <div class="valign">
+                                                <aside>
+                                                    <ul class="approfondimenti-col">
+                                                        <li><i class="bi bi-square-fill"></i><a href="#" class="tags"
+                                                                                                title="Treno investe e uccide ragazza di 17 anni">Treno
+                                                            investe e uccide ragazza di 17 anni</a></li>
+                                                        <li><i class="bi bi-square-fill"></i><a href="#" class="tags"
+                                                                                                title="Faito, l'unico sopravvissuto «è sveglio e collaborante»">Faito,
+                                                            l'unico sopravvissuto «è sveglio e collaborante»</a></li>
+                                                    </ul>
+                                                </aside>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="divider-dark-spaced"></div>
+
+                <div class="strip-3-bottom divider">
+                    <div class="row">
+                        <article class="col">
+                            <div class="item-content">
+                                <figure class=""><a href="#"
+                                                    title="Chi è Anders Arborelius, il carmelitano svedese papabile scoperto dal nulla da Bergoglio Il profilo"><img
+                                        src="https://picsum.photos/264/144"
+                                        title="Chi è Anders Arborelius, il carmelitano svedese papabile scoperto dal nulla da Bergoglio Il profilo"
+                                        width="264" height="144" alt="immagine piccola"></a>
+                                    <ul class="info-item">
+                                        <li class="has-trend" title="Notizia di tendenza">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                 viewBox="0 0 26 26">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g>
+                                                        <rect width="26" height="26" fill="#B22222" rx="2"></rect>
+                                                        <g>
+                                                            <path d="M0 0L19 0 19 19 0 19z"
+                                                                  transform="translate(3 4)"></path>
+                                                            <path fill="#FFF" fill-rule="nonzero"
+                                                                  d="M13.536 6.654L10.857 4.071 17.643 4.071 17.643 10.857 15.059 8.151 10.211 13.049 7.332 10.17 3.097 14.354 1.574 12.857 7.332 7.099 10.211 9.979z"
+                                                                  transform="translate(3 4)"></path>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </figure>
+                                <h2 class="titolo-main-small titolo-hover"><a href="#" class="ml_primary_link">Chi è
+                                    Anders Arborelius, il
+                                    carmelitano svedese papabile scoperto dal nulla da Bergoglio<br>
+                                    <u>Il profilo</u></a></h2><span
+                                    class="firma"><span>di Franca Giansoldati</span></span></div>
+                        </article>
+                        <article class="col">
+                            <div class="item-content">
+                                <figure class="medium"><a href="#"
+                                                          title="Dai Novendiali ai lavori delle Congregazioni, cosa succede dopo i funerali e quando inizia il Conclave"><img
+                                        src="https://picsum.photos/262/144"
+                                        title="Dai Novendiali ai lavori delle Congregazioni, cosa succede dopo i funerali e quando inizia il Conclave"
+                                        width="264" height="144" alt="immagine piccola"></a>
+                                    <ul class="info-item">
+                                        <li class="has-trend" title="Notizia di tendenza">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                 viewBox="0 0 26 26">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g>
+                                                        <rect width="26" height="26" fill="#B22222" rx="2"></rect>
+                                                        <g>
+                                                            <path d="M0 0L19 0 19 19 0 19z"
+                                                                  transform="translate(3 4)"></path>
+                                                            <path fill="#FFF" fill-rule="nonzero"
+                                                                  d="M13.536 6.654L10.857 4.071 17.643 4.071 17.643 10.857 15.059 8.151 10.211 13.049 7.332 10.17 3.097 14.354 1.574 12.857 7.332 7.099 10.211 9.979z"
+                                                                  transform="translate(3 4)"></path>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </figure>
+                                <h2 class="titolo-main-small titolo-hover"><a href="#" class="ml_primary_link">Dai
+                                    Novendiali ai lavori delle
+                                    Congregazioni, cosa succede dopo i funerali e quando inizia il Conclave</a></h2>
+                                <span class="firma">di Redazione web</span></div>
+                        </article>
+                        <article class="col">
+                            <div class="item-content">
+                                <figure class="medium"><a href="#"
+                                                          title="Il protocollo violato dal Vaticano, così Zelensky e la moglie hanno trovato posto in prima fila (come Trump)"><img
+                                        src="https://picsum.photos/267/142"
+                                        title="Il protocollo violato dal Vaticano, così Zelensky e la moglie hanno trovato posto in prima fila (come Trump)"
+                                        width="264" height="144" alt="immagina piccola"></a></figure>
+                                <h2 class="titolo-main-small titolo-hover"><a href="#" class="ml_primary_link">Il
+                                    protocollo violato dal
+                                    Vaticano, così Zelensky e la moglie hanno trovato posto in prima fila (come
+                                    Trump)</a></h2><span class="firma"><span>di Mario Landi</span></span></div>
+                        </article>
+                    </div>
+                </div>
+                <div class="divider-dark-spaced"></div>
+
+                <div class="strip-2-fotina ratio-4-3 divider listing">
+                    <div class="strip-2-fotina ratio-4-3 divider">
+                        <div class="row ">
+                            <article class="col">
+                                <div class="item_content">
+                                    <h2 class="titolo-main-medium titolo-hover"><a href="#" class="ml_primary_link">Federico
+                                        Sasso firma contratto con l'Inter: «Non dimenticherò mai il Paperino San
+                                        Giorgio»</a></h2>
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12">
+                                            <div class="valign">
+                                                <figure class="medium"><a href="#"
+                                                                          title="Federico
+                                        Sasso firma contratto con l'Inter: «Non dimenticherò mai il Paperino San Giorgio»"><img
+                                                        src="https://picsum.photos/404/221"
+                                                        title="Federico
+                                        Sasso firma contratto con l'Inter: «Non dimenticherò mai il Paperino San Giorgio»"
+                                                        width="404" height="221" alt="immagine piccola"></a></figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-12">
+                                            <div class="valign__content">
+                                                <div class="valign">
+                                                    <span class="firma"><span>di Filippo Zhao</span></span>
+                                                    <aside>
+                                                        <ul class="approfondimenti-col">
+                                                            <li><i class="bi bi-square-fill "></i><a href="#"
+                                                                                                     class="tags "
+                                                                                                     title="Ora faccio i soldi">Ora
+                                                                faccio i soldi</a></li>
+                                                            <li><i class="bi bi-square-fill "></i><a href="#"
+                                                                                                     class="tags "
+                                                                                                     title="Campionato">Campionato</a>
+                                                            </li>
+                                                        </ul>
+                                                    </aside>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <div class="divider-vertical-dark"></div>
+                            <article class="col">
+                                <div class="item_content">
+                                    <h2 class="titolo-main-medium titolo-hover"><a href="#" class="ml_primary_link">Uccide
+                                        l'amico per sbaglio: <u>«non pensavo ci fosse il fuoco amico»</u></a>
+                                    </h2>
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12">
+                                            <div class="valign">
+                                                <figure class="medium"><a href="#"
+                                                                          title="Uccide
+                                        l'amico per sbaglio: <u>«non pensavo ci fosse il fuoco amico»"><img
+                                                        src="https://picsum.photos/264/145"
+                                                        title="Uccide
+                                        l'amico per sbaglio: <u>«non pensavo ci fosse il fuoco amico»"
+                                                        width="404" height="221" alt="immagine piccola"></a></figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-12">
+                                            <div class="valign__content">
+                                                <div class="valign">
+                                                    <aside>
+                                                        <ul class="approfondimenti-col">
+                                                            <li><i class="bi bi-square-fill"></i><a href="#"
+                                                                                                    class="tags"
+                                                                                                    title="Lo scar d'oro">Lo
+                                                                scar d'oro</a></li>
+                                                            <li><i class="bi bi-square-fill"></i><a href="#"
+                                                                                                    class="tags"
+                                                                                                    title="Ranked">Ranked</a>
+                                                            </li>
+                                                        </ul>
+                                                    </aside>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="divider-dark-spaced"></div>
+
+                    <div class="strip-2-fotina ratio-4-3 divider">
+                        <div class="row ">
+                            <article class="col">
+                                <div class="item_content">
+                                    <h2 class="titolo-main-medium titolo-hover"><a href="#" class="ml_primary_link">Paolo
+                                        Bolonis picchia la moglie: Scandalo per il conduttore di Avanti un Altro</a>
+                                    </h2>
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12">
+                                            <div class="valign">
+                                                <figure class="medium"><a href="#"
+                                                                          title="Paolo Bolonis picchia la moglie: Scandalo per il conduttore di Avanti un Altro"><img
+                                                        src="https://picsum.photos/403/221"
+                                                        title="Paolo Bolonis picchia la moglie: Scandalo per il conduttore di Avanti un Altro"
+                                                        width="404" height="221" alt="immagine piccola"></a></figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-12">
+                                            <div class="valign__content">
+                                                <div class="valign">
+                                                    <span class="firma"><span>di Luca Lautenti</span></span>
+                                                    <aside>
+                                                        <ul class="approfondimenti-col">
+                                                            <li><i class="bi bi-square-fill "></i><a href="#"
+                                                                                                     class="tags "
+                                                                                                     title="Cosa è successo">Cosa
+                                                                è successo</a></li>
+                                                            <li><i class="bi bi-square-fill "></i><a href="#"
+                                                                                                     class="tags "
+                                                                                                     title="L'incidente">Prank</a>
+                                                            </li>
+                                                        </ul>
+                                                    </aside>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <div class="divider-vertical-dark"></div>
+                            <article class="col">
+                                <div class="item_content">
+                                    <h2 class="titolo-main-medium titolo-hover"><a href="#" class="ml_primary_link">Ragazzo
+                                        umbro perde il suo avocado preferito: La regione mobilita la squadra di
+                                        ricerche</a>
+                                    </h2>
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12">
+                                            <div class="valign">
+                                                <figure class="medium"><a href="#"
+                                                                          title="Ragazzo umbro perde il suo avocado preferito: La regione mobilita la squadra di ricerche"><img
+                                                        src="https://picsum.photos/264/147"
+                                                        title="Ragazzo umbro perde il suo avocado preferito: La regione mobilita la squadra di ricerche"
+                                                        width="404" height="221" alt="immagine piccola"></a></figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-12">
+                                            <div class="valign__content">
+                                                <div class="valign">
+                                                    <span class="firma"><span>di Egio Grezio</span></span>
+                                                    <aside>
+                                                        <ul class="approfondimenti-col">
+                                                            <li><i class="bi bi-square-fill"></i><a href="#"
+                                                                                                    class="tags"
+                                                                                                    title="chi l'ha visto">Chi
+                                                                l'ha visto</a></li>
+                                                            <li><i class="bi bi-square-fill"></i><a href="#"
+                                                                                                    class="tags"
+                                                                                                    title="Frutta e verdura fanno bene»">«Frutta
+                                                                e verdura fanno bene»</a></li>
+                                                        </ul>
+                                                    </aside>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider-dark-spaced"></div>
+
+                <div class="strip-1-3-right divider">
+                    <div class="d-flex align-items-center justify-content-between roma-line roma">
+                        <div class="d-flex align-items-center left-text">
+                            <img id="logo_roma" src="https://www.ilmessaggero.it/img/colosseo.svg" alt="Logo Roma"
+                                 class="me-2"/>
+                            <a href="#" title="Roma" class="text-nowrap roma-text">ROMA</a>
+                        </div>
+
+                        <div class="flex-grow-1 mx-3 divider-red"></div>
+
+                        <div class="d-flex align-items-center right-text mappa-text">
+                            <a href="#" title="Tutti gli articoli" class="text-nowrap">Tutti gli articoli</a>
+                            <span class="px-3 d-flex align-items-center text-nowrap">
+      <a href="#" title="Vedi la Mappa" class="d-flex align-items-center text-nowrap">
+        <img src="https://www.ilmessaggero.it/img/map-pin-roma.svg" width="12" alt="Mappa" class="me-1"/>
+        Mappa
+      </a>
+    </span>
+                        </div>
+                    </div>
+                    <div class="strip-1-right principale mb-3">
+                        <div class="row">
+                            <article class="col-xs-12 html_base_right centro_storico ">
+                                <div class="item_content">
+                                    <div class="row middle-xs">
+                                        <div class="col-xs-6">
+                                            <figure class="medium"><a href="#"
+                                                                      title="immagine media"><img
+                                                    src="https://picsum.photos/404/220"
+                                                    title="immagine media"
+                                                    width="404" height="221" alt="immagine media"></a></figure>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="valign__content">
+                                                <div class="valign">
+                                                    <span class="testatina testatina-articolo"><a
+                                                            href="#">IL RACCONTO</a></span>
+                                                    <h2 class="titolo-main-medium titolo-hover"><a href="#">Roma inavasa
+                                                        dalle scimmie. Le scimmie rispondono: «A Roma su' boni cu'
+                                                        l’arte, ma 'u sucu 'i pummarola mi veni megghiu a mia!»</a></h2>
+                                                    <span class="firma"><span>di Laura Guerra</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="strip-3-bottom mb-3">
+                        <div class="row">
+                            <article class="col">
+                                <div class="item_content">
+                                    <span class="testatina testatina-articolo"><a href="#">EVENTI</a></span>
+                                    <figure class="medium"><a href="#"
+                                                              title="Roma eventi weekend. Festa della Resistenza, Japan Days, Festival dell'Oriente, Jovanotti live"><img
+                                            src="https://picsum.photos/264/149"
+                                            title="Roma eventi weekend. Festa della Resistenza, Japan Days, Festival dell'Oriente, Jovanotti live"
+                                            width="264" height="144" alt="immagine piccola"></a></figure>
+                                    <h2 class="titolo-main-small titolo-hover"><a href="#" class="ml_primary_link">Roma
+                                        eventi weekend.
+                                        Festa
+                                        della Resistenza, Japan Days, Festival dell'Oriente, Jovanotti live</a> <a
+                                            href="#" class="ml_articolo"><u>Le mostre a Roma</u></a></h2><span
+                                        class="firma"><span>di Valeria Arnaldi</span></span></div>
+                            </article>
+
+                            <article class="col">
+                                <div class="item_content">
+                                    <span class="testatina testatina-articolo"><a
+                                            href="#">LE ESEQUIE DI BERGOGLIO</a></span>
+                                    <figure class="medium"><a href="#"
+                                                              title="La soddisfazione di Gualtieri: «È il successo del “metodo Giubileo”»"><img
+                                            src="https://picsum.photos/260/145"
+                                            title="La soddisfazione di Gualtieri: «È il successo del “metodo Giubileo”»"
+                                            width="264" height="144" alt="immagine piccola"></a></figure>
+                                    <h2 class="titolo-main-small titolo-hover"><a href="#" class="ml_primary_link">La
+                                        soddisfazione di
+                                        Gualtieri: «È il successo del “metodo Giubileo”»</a></h2><span
+                                        class="firma"><span>di Gianluca Carini</span></span></div>
+                            </article>
+
+                            <article class="col">
+                                <div class="item_content">
+                                    <span class="testatina testatina-articolo"><a href="#">ROMA</a></span>
+                                    <figure class="medium"><a href="#"
+                                                              title="Papa Francesco, i romani e quell'abbraccio lungo il corteo funebre: «Rimarrai sempre con noi»"><img
+                                            src="https://picsum.photos/264/145"
+                                            title="Papa Francesco, i romani e quell'abbraccio lungo il corteo funebre: «Rimarrai sempre con noi»"
+                                            width="264" height="144" alt="immagine piccola"></a></figure>
+                                    <h2 class="titolo-main-small titolo-hover"><a href="#" class="ml_primary_link">Papa
+                                        Francesco, i
+                                        romani e
+                                        quell'abbraccio lungo il corteo funebre: «Rimarrai sempre con noi»</a></h2><span
+                                        class="firma"><span>di Stefania Piras</span></span></div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider-dark-spaced"></div>
+
+                <div class="strip-nl nl-option-wrapper">
+                    <div class="titolo-hover ms-3 mt-3 d-inline-block">
+                        <a href="#" class="newsletter" title="Vai alle Newsletter">NEWSLETTER</a>
+                    </div>
+                    <div class="newsletter-div"></div>
+                    <div class="row">
+                        <div class="col ms-3 nl-container">
+                            <div class="item_content nl-content">
+                                <a href="#" class="" title="Vai alle Newsletter">
+                                    <div class="nl-option-header nl-title-hover">
+                                        <img src="https://statics.cedscdn.it/utils/img/icons/mail-star.svg" width="25"
+                                             alt="aggiornamenti">
+                                        Apericena
+                                        <div class="my-1 intro">Il punto del direttore, ogni lunedì</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" href="#" title="anteprima Newsletter">
+                                    <article>
+                                        <figure class="med"><img
+                                                src="https://picsum.photos/266/144"
+                                                alt="immagine nl 1">
+                                        </figure>
+                                        <div class="nl-firma">di <b>Guido Boffo</b></div>
+                                        <div class="nl-option-title nl-title-hover mb-3">Scommesse illegali, niente
+                                            Nazionale per chi
+                                            sbaglia: il mondo del calcio smetta di voltarsi dall'altra parte
+                                        </div>
+                                    </article>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col nl-container">
+                            <div class="item_content nl-content">
+                                <a href="#" title="Vai alle Newsletter">
+                                    <div class="nl-option-header nl-title-hover">
+                                        <img src="https://statics.cedscdn.it/utils/img/icons/mail-star.svg" width="25"
+                                             alt="aggiornamenti">
+                                        Roma Weekend
+                                        <div class="intro">Gli eventi del fine settimana, ogni giovedì</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" href="#" title="anteprima Newsletter">
+                                    <article>
+                                        <figure class="med"><img
+                                                src="https://picsum.photos/266/147"
+                                                alt="immagine nl 2">
+                                        </figure>
+                                        <div class="nl-firma">di <b>Valeria Arnaldi</b></div>
+                                        <div class="nl-option-title nl-title-hover mb-3">Roma eventi weekend. Festa
+                                            della Resistenza, Japan
+                                            Days, Festival dell'Oriente, Jovanotti live
+                                        </div>
+                                    </article>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col me-3 nl-container">
+                            <div class="item_content nl-content">
+                                <a href="#" title="Vai alle Newsletter">
+                                    <div class="nl-option-header nl-title-hover">
+                                        <img src="https://statics.cedscdn.it/utils/img/icons/mail-star.svg" width="25"
+                                             alt="aggiornamenti">
+                                        I nostri soldi
+                                        <div class="intro">Risparmio e investimenti, ogni venerdì</div>
+                                    </div>
+                                </a>
+                                <a target="_blank" href="#" title="anteprima Newsletter">
+                                    <article>
+                                        <figure class="med"><img
+                                                src="https://picsum.photos/263/147"
+                                                alt="immagine nl 2">
+                                        </figure>
+                                        <div class="nl-firma">di <b>Giacomo Andreoli</b></div>
+                                        <div class="nl-option-title nl-title-hover mb-3">Truffe online, colpiti 2,8
+                                            milioni di italiani
+                                            (+9%): danno da 500 milioni. Le più diffuse e come difendersi
+                                        </div>
+                                    </article>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider-dark"></div>
+
+                <div class="strip-1-right featured giorno-notte">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center left-text gn-back-white ms-3 my-3 d-inline-block"><h3
+                                class="giorno-notte-text">GIORNO&amp;NOTTE</h3>
+                        </div>
+                        <div class="flex-grow-1 me-3 divider-white"></div>
+                    </div>
+                    <div class="row">
+                        <article class="col gn-title mx-3 mb-3">
+                            <div class="item_content">
+                                <div class="row middle-xs">
+                                    <div class="col">
+                                        <figure class="medium"><a href="#"
+                                                                  title="A teatro con i talenti del futuro"><img
+                                                src="https://statics.cedscdn.it/photos/MED/2025/04/26/8801217_OBJ59342063_15312.jpg"
+                                                title="A teatro con i talenti del futuro" width="404" height="221"
+                                                alt="immagine media giorno notte"></a>
+                                        </figure>
+                                    </div>
+                                    <div class="col">
+                                        <div class="valign__content">
+                                            <div class="valign">
+                                                <h2 class="titolo-hover"><a href="#" class="ml_primary_link">A teatro
+                                                    con i
+                                                    talenti del futuro</a></h2></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="divider-dark"></div>
+
+                <div id="carosello">
+                    <div class="d-flex align-items-end justify-content-between border-bottom border-black mb-3"
+                         style="height: 100%;">
+                        <div class="d-flex left-text ao-back-black d-inline-block align-self-end">
+                            <h3 class="accadeoggi-txt mb-0 mx-2">accade oggi</h3>
+                        </div>
+                        <div class="align-self-end">
+                            <a class="archivio" href="#">sfoglia l'archivio<i class="bi bi-chevron-right"></i></a>
+                        </div>
+                    </div>
+                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://picsum.photos/495/221" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+
+                                    <p class="cr-sml-txt">carosello slide 1</p>
+                                    <h5 class="cr-bg-txt">CAROSELLO!</h5>
+                                </div>
+                                <div class="carousel-horizontal-line">
+                                    <i class="bi bi-circle-fill icon-left"></i>
+                                    <i class="bi bi-circle-fill icon-center"><span class="icon-text">2001</span>
+                                    </i>
+                                    <i class="bi bi-circle-fill icon-right"></i>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://picsum.photos/495/222" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p class="cr-sml-txt">carosello slide 2</p>
+                                    <h5 class="cr-bg-txt">CAROSELLO!</h5>
+                                </div>
+                                <div class="carousel-horizontal-line">
+                                    <i class="bi bi-circle-fill icon-left"></i>
+                                    <i class="bi bi-circle-fill icon-center"><span class="icon-text">1945</span></i>
+                                    <i class="bi bi-circle-fill icon-right"></i>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://picsum.photos/495/220" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p class="cr-sml-txt">carosello slide 3</p>
+                                    <h5 class="cr-bg-txt">CAROSELLO!</h5>
+                                </div>
+                                <div class="carousel-horizontal-line">
+                                    <i class="bi bi-circle-fill icon-left"></i>
+                                    <i class="bi bi-circle-fill icon-center"><span class="icon-text">2025</span></i>
+                                    <i class="bi bi-circle-fill icon-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev lower-ico d-flex justify-content-center align-items-center bg-dark bg-opacity-90 rounded-circle"
+                                type="button" data-bs-target="#carouselExampleAutoplaying"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next lower-ico d-flex justify-content-center align-items-center bg-dark bg-opacity-90 rounded-circle"
+                                type="button" data-bs-target="#carouselExampleAutoplaying"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+                        <button type="button" class="btn btn-danger position-absolute accadeoggi-btn">
+                            Accade Oggi
+                        </button>
+                    </div>
+                </div>
+                <div class="divider-dark"></div>
+
+                <div id="adv_Native1" class="adv_Native1 border  mb-4">
+                    <a href="#" class="d-flex"><img src="" class="" alt="*advertisement*"/> </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Divisore verticale -->
+
+
+        <section id="right-rail" class="col-12 col-lg-4">
+            <div id="right-content">
+
+                <!--sezione MyPlay-->
+                <div class="myplay area right hp-no-bottom-margin" data-id="503" data-nome="Right Home 2023">
+                    <!--questo div sotto (tetatabox) fa l'immagine vettoriale del titolo e cose arcane-->
+                    <div class="testatabox default ms-3 py-3 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="106" height="48" viewBox="0 0 106 48"
+                             fill="none">
+                            <g clip-path="url(#clip0_1809_43173)">
+                                <path d="M24.1402 0.24292H24.1302C11.168 0.24292 0.660156 10.7508 0.660156 23.7129V23.7229C0.660156 36.685 11.168 47.1929 24.1302 47.1929H24.1402C37.1023 47.1929 47.6102 36.685 47.6102 23.7229V23.7129C47.6102 10.7508 37.1023 0.24292 24.1402 0.24292Z"
+                                      fill="#B22222"></path>
+                                <g filter="url(#filter0_d_1809_43173)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M19.1904 4.42285L22.5104 7.55285C22.5104 7.55285 23.3804 6.78285 24.2504 6.00285L24.6004 5.69285C25.3404 5.02285 26.0004 4.43285 26.0004 4.43285L29.5304 7.74285L30.3703 6.98285L30.8904 7.54285L29.4804 8.81285V18.7929L29.6404 18.5529C30.0104 18.0129 30.4004 17.5829 30.8004 17.2529L31.0104 17.1029C31.4904 16.7629 31.9804 16.5929 32.4604 16.5929C32.8804 16.5929 33.2403 16.7429 33.5303 17.0529C33.8303 17.3629 34.1304 17.9329 34.4403 18.7729C34.7003 19.4729 35.0004 20.4029 35.3204 21.5629C35.6404 22.7229 35.9503 24.0429 36.2603 25.5429L37.3804 30.8529H37.5103L37.7603 30.5229C38.1003 30.0729 38.4403 29.5829 38.7803 29.0529C39.2104 28.3829 39.6004 27.6729 39.9504 26.9429C40.3004 26.2029 40.5904 25.4529 40.8104 24.7029C41.0304 23.9429 41.1404 23.2329 41.1404 22.5729C41.1404 22.3529 41.1304 22.0729 41.1104 21.7329C41.0904 21.3929 41.0603 21.0429 41.0303 20.6929C41.0004 20.3429 40.9704 20.0029 40.9504 19.6829C40.9304 19.3629 40.9203 19.1029 40.9203 18.9029C40.9203 18.1129 41.1203 17.5229 41.5103 17.1529C41.9003 16.7829 42.3204 16.5929 42.7603 16.5929C43.3303 16.5929 43.7504 16.8329 44.0103 17.3229C44.2703 17.8029 44.4104 18.3729 44.4104 19.0029C44.4104 19.9029 44.1704 21.0629 43.6804 22.4729C43.1903 23.8829 42.5604 25.3929 41.7704 27.0129C40.9804 28.6329 40.0603 30.2829 39.0303 31.9629C38.0004 33.6429 36.9303 35.1929 35.8303 36.6029C34.1603 38.7829 32.6104 40.3928 31.1904 41.4328C29.7704 42.4729 28.4403 43.0028 27.2104 43.0028C26.2903 43.0028 25.5504 42.7528 25.0204 42.2429C24.4804 41.7329 24.2104 41.1229 24.2104 40.3929C24.2104 39.8429 24.3604 39.4029 24.6704 39.0529C24.9804 38.7129 25.3904 38.5429 25.8904 38.5429C26.3304 38.5429 26.6504 38.6729 26.8604 38.9229C27.0704 39.1729 27.2404 39.4629 27.3703 39.7829C27.5003 40.1029 27.6404 40.3829 27.7804 40.6429C27.9204 40.8929 28.1504 41.0229 28.4604 41.0229C28.8804 41.0229 29.4104 40.7929 30.0403 40.3329C30.6703 39.8729 31.3204 39.2929 31.9504 38.6029C32.5904 37.9129 33.1904 37.1529 33.7504 36.3428C34.3104 35.5329 34.7104 34.7729 34.9504 34.0629L33.1703 24.7929L33.1003 24.4629C32.7703 22.8329 32.4304 21.7029 32.0904 21.0529C31.7304 20.3629 31.3504 20.0129 30.9504 20.0129C30.5304 20.0129 30.1504 20.3229 29.8104 20.9529C29.6903 21.1728 29.5804 21.4229 29.4604 21.7329V26.2629L30.8604 27.7529L31.6704 27.0329L32.2204 27.6129L28.5704 31.1229L25.9804 28.3529L25.0204 29.2629L24.4904 28.7029L25.4404 27.7929V9.32285L24.1704 8.10285V11.9529V16.3629V27.9729V28.2229L24.3004 28.3629L21.4604 31.1229L18.9304 28.3929L17.9604 29.3229L17.4304 28.7629L18.5504 27.6829V20.2629H17.2604V26.3029V26.4229C17.2404 27.2829 16.9104 31.2829 11.8904 31.2829C9.75035 31.2829 10.1504 31.0429 9.09035 31.0429H9.05035C8.75035 31.0429 6.83035 31.1529 6.83035 32.5729C6.83035 33.2329 7.15035 33.5029 7.23035 33.5729C7.23035 33.5729 7.17035 33.5729 7.06035 33.5729H6.94035C6.12035 33.5629 3.86035 33.2529 3.86035 30.2229C3.86035 26.9328 7.63035 26.7429 8.47035 26.7329H8.63035C9.40035 26.7329 10.8704 27.0529 12.4804 27.6329C12.4804 27.6329 13.4004 27.9729 14.5204 27.9729C16.4404 27.9729 16.5104 27.0129 16.5104 26.2329V7.59285L15.6904 8.36285V22.7329C15.6904 26.4429 11.1004 26.0729 11.1004 26.0729C11.7204 25.5829 11.7004 25.0029 11.7004 24.9329V20.2429H10.1604C8.47035 20.2429 7.78035 21.0729 7.78035 21.0729V18.8529C7.78035 16.2329 11.2904 16.0829 11.6704 16.0729H11.7004V11.1429L19.2004 4.42285H19.1904ZM23.4104 20.2429H22.6004V26.5129L23.4104 27.3929V20.2529V20.2429ZM17.2904 8.06285V16.0829H18.5804V9.27285L17.2904 8.06285ZM23.4104 7.57285L22.6004 8.31285V16.0829H23.4104V7.57285ZM15.4704 4.43285C15.4704 4.43285 15.8204 6.21285 14.8504 7.38285C13.8404 8.60285 12.6404 9.40285 10.6004 9.40285H10.5604C10.2904 9.40285 8.69035 9.36285 7.65035 9.20285H7.58035H7.49035C6.93035 9.20285 5.13035 9.38285 6.19035 11.5429H6.17035C5.93035 11.5029 3.88035 11.0729 3.88035 8.30285C3.88035 6.67285 5.25035 4.91285 7.68035 4.91285C7.68035 4.91285 9.22035 4.98285 11.0104 5.35285C11.0104 5.35285 14.6104 5.89285 15.4804 4.42285L15.4704 4.43285Z"
+                                          fill="white"></path>
+                                </g>
+                                <path d="M48.0702 41.673L48.2702 40.353C47.1302 40.333 46.3302 40.213 45.8802 39.993C45.4302 39.773 45.2002 39.393 45.2002 38.843C45.2002 38.663 45.2202 38.473 45.2502 38.253C45.2802 38.033 45.3502 37.763 45.4602 37.423L46.6802 32.833C48.3102 32.613 49.8802 32.163 51.3802 31.493C52.8902 30.823 54.2202 29.983 55.3702 28.973C56.5302 27.963 57.4502 26.813 58.1402 25.523C58.8302 24.233 59.1802 22.863 59.1802 21.413C59.1802 19.583 58.6602 18.163 57.6302 17.153C56.6002 16.143 55.1402 15.633 53.2702 15.633C52.9202 15.633 52.5702 15.653 52.2302 15.703C51.8902 15.743 51.5402 15.803 51.1902 15.863L52.3402 11.473H49.8302L48.2802 16.753C47.1602 17.213 46.0902 17.813 45.0802 18.553C44.0702 19.293 43.1602 20.123 42.3402 21.043L43.2302 21.963C43.8902 21.263 44.6102 20.603 45.3802 20.003C46.1502 19.403 46.9502 18.873 47.7902 18.433L41.8202 38.823C41.6402 39.393 41.3502 39.793 40.9302 40.013C40.5102 40.233 39.8402 40.343 38.9202 40.343L38.7202 41.663H48.0602L48.0702 41.673ZM47.0502 31.413L50.7802 17.423C51.0402 17.383 51.3102 17.343 51.5902 17.313C51.8602 17.283 52.1502 17.263 52.4302 17.263C53.4402 17.263 54.2502 17.663 54.8502 18.453C55.4502 19.243 55.7602 20.303 55.7602 21.623C55.7602 22.813 55.5102 23.953 55.0202 25.043C54.5302 26.133 53.8702 27.113 53.0602 27.993C52.2502 28.873 51.3202 29.613 50.2702 30.203C49.2202 30.793 48.1502 31.203 47.0502 31.423V31.413ZM63.4502 33.753C63.9602 33.753 64.5102 33.593 65.1202 33.273C65.7202 32.953 66.3302 32.533 66.9202 32.003C67.5102 31.473 68.0802 30.863 68.6002 30.173C69.1302 29.483 69.5602 28.763 69.8902 28.013L68.9002 27.453C68.7702 27.693 68.5602 28.033 68.2702 28.463C67.9802 28.893 67.6602 29.313 67.3002 29.713C66.9402 30.123 66.5602 30.473 66.1602 30.773C65.7602 31.073 65.3902 31.223 65.0402 31.223C64.8002 31.223 64.6202 31.143 64.5102 30.993C64.4002 30.843 64.3402 30.663 64.3402 30.463C64.3402 30.153 64.3802 29.773 64.4702 29.323C64.5602 28.873 64.6902 28.353 64.8702 27.753L70.7802 6.073L64.7402 6.373L64.4802 7.363C66.1502 7.363 66.9902 7.753 66.9902 8.513C66.9902 8.713 66.9302 9.013 66.8202 9.423C66.7102 9.833 66.6002 10.233 66.4902 10.633L62.1002 26.773C61.7702 28.073 61.5402 29.093 61.4102 29.843C61.2802 30.593 61.2102 31.183 61.2102 31.623C61.2102 32.393 61.3902 32.943 61.7502 33.273C62.1102 33.603 62.6802 33.763 63.4502 33.773V33.753ZM82.2602 33.753C83.2502 33.753 84.2802 33.313 85.3502 32.413C86.4202 31.523 87.4102 30.263 88.3402 28.633L87.4802 27.943C86.7502 28.953 86.1002 29.783 85.5202 30.423C84.9402 31.063 84.4902 31.383 84.1802 31.383C83.7602 31.383 83.5502 31.063 83.5502 30.423C83.5502 30.073 83.6202 29.533 83.7502 28.803C83.8802 28.073 84.0602 27.273 84.2902 26.393C84.5202 25.513 84.7902 24.603 85.0802 23.653C85.3802 22.703 85.6802 21.813 85.9902 20.983L87.8702 15.933H85.1302L84.4402 17.783C84.1502 17.013 83.7802 16.463 83.3202 16.113C82.8602 15.773 82.2602 15.603 81.5402 15.603C80.3502 15.603 79.1402 16.013 77.9102 16.843C76.6802 17.663 75.5602 18.723 74.5402 20.013C73.5302 21.303 72.7002 22.733 72.0702 24.323C71.4402 25.913 71.1102 27.463 71.1102 28.973C71.1102 30.483 71.4202 31.643 72.0502 32.483C72.6802 33.333 73.5502 33.753 74.6702 33.753C75.2202 33.753 75.7802 33.653 76.3502 33.443C76.9202 33.233 77.4702 32.933 78.0002 32.553C78.5302 32.173 79.0202 31.723 79.4702 31.203C79.9202 30.683 80.3102 30.123 80.6402 29.503L80.7702 29.533C80.7302 29.973 80.7002 30.323 80.6902 30.593C80.6802 30.853 80.6702 31.093 80.6702 31.283C80.6702 32.163 80.8102 32.793 81.0802 33.183C81.3602 33.573 81.7502 33.763 82.2502 33.763L82.2602 33.753ZM76.0902 31.413C75.5202 31.413 75.0702 31.173 74.7402 30.703C74.4102 30.233 74.2402 29.603 74.2402 28.803C74.2402 27.663 74.4702 26.423 74.9302 25.093C75.3902 23.763 75.9902 22.513 76.7102 21.363C77.4402 20.213 78.2402 19.243 79.1402 18.473C80.0302 17.703 80.8902 17.323 81.7302 17.323C82.1502 17.323 82.4802 17.483 82.7202 17.813C82.9602 18.143 83.0802 18.593 83.0802 19.163C83.0802 19.863 82.9802 20.663 82.7802 21.543C82.5802 22.423 82.3102 23.323 81.9602 24.233C81.6102 25.143 81.2002 26.033 80.7402 26.893C80.2802 27.753 79.7902 28.513 79.2702 29.183C78.7502 29.853 78.2202 30.393 77.6702 30.803C77.1202 31.213 76.5902 31.413 76.0902 31.413ZM88.6002 42.003C89.8302 42.003 91.1602 41.483 92.5802 40.433C94.0002 39.393 95.5402 37.773 97.2202 35.603C98.3202 34.193 99.3902 32.653 100.42 30.963C101.45 29.283 102.37 27.633 103.16 26.013C103.95 24.393 104.59 22.883 105.07 21.473C105.55 20.063 105.8 18.913 105.8 18.003C105.8 17.363 105.67 16.803 105.4 16.323C105.13 15.843 104.72 15.593 104.15 15.593C103.71 15.593 103.29 15.783 102.9 16.153C102.5 16.523 102.31 17.113 102.31 17.903C102.31 18.103 102.32 18.363 102.34 18.683C102.36 19.003 102.39 19.333 102.42 19.693C102.45 20.043 102.48 20.393 102.5 20.733C102.52 21.073 102.53 21.353 102.53 21.573C102.53 22.233 102.42 22.943 102.2 23.703C101.98 24.463 101.69 25.213 101.34 25.943C100.99 26.683 100.6 27.383 100.17 28.053C99.7402 28.723 99.3202 29.323 98.9002 29.853H98.7702L97.6502 24.543C97.3402 23.043 97.0302 21.723 96.7102 20.563C96.3902 19.403 96.1002 18.483 95.8302 17.773C95.5202 16.933 95.2202 16.363 94.9202 16.053C94.6202 15.743 94.2702 15.593 93.8502 15.593C93.3702 15.593 92.8802 15.763 92.4002 16.103C91.9202 16.443 91.4602 16.923 91.0302 17.553C90.6002 18.183 90.2102 18.923 89.8402 19.783C89.4802 20.643 89.1902 21.573 88.9702 22.593L90.1902 22.923C90.5402 21.563 90.8902 20.563 91.2302 19.933C91.5702 19.303 91.9502 18.993 92.3702 18.993C92.7702 18.993 93.1502 19.343 93.5102 20.033C93.8702 20.723 94.2302 21.973 94.5802 23.773L96.3602 33.043C96.1202 33.743 95.7202 34.503 95.1502 35.323C94.5902 36.133 93.9902 36.893 93.3502 37.583C92.7102 38.273 92.0702 38.853 91.4402 39.313C90.8102 39.773 90.2702 40.003 89.8602 40.003C89.5502 40.003 89.3302 39.873 89.1802 39.623C89.0402 39.373 88.9002 39.083 88.7702 38.763C88.6402 38.443 88.4702 38.163 88.2602 37.903C88.0502 37.653 87.7302 37.523 87.2902 37.523C86.7802 37.523 86.3802 37.693 86.0702 38.033C85.7602 38.373 85.6102 38.823 85.6102 39.373C85.6102 40.103 85.8802 40.713 86.4202 41.223C86.9602 41.733 87.6902 41.983 88.6102 41.983L88.6002 42.003Z"
+                                      fill="white"></path>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d_1809_43173" x="-0.139648" y="4.42285" width="48.5498"
+                                        height="46.5801" filterUnits="userSpaceOnUse"
+                                        color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                                   values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                                   result="hardAlpha"></feColorMatrix>
+                                    <feOffset dy="4"></feOffset>
+                                    <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+                                    <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                    <feColorMatrix type="matrix"
+                                                   values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+                                    <feBlend mode="normal" in2="BackgroundImageFix"
+                                             result="effect1_dropShadow_1809_43173"></feBlend>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1809_43173"
+                                             result="shape"></feBlend>
+                                </filter>
+                                <clipPath id="clip0_1809_43173">
+                                    <rect width="105.13" height="46.95" fill="white"
+                                          transform="translate(0.660156 0.24292)"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="strip-1-bottom principale">
+                        <div class="row">
+                            <article class="col-xs-12 html_base_bottom  viterbo ">
+                                <div class="item_content video">
+                                    <figure class="medium px-2"><a href="#"
+                                                                   title="Viterbo, paura durante la festa per i 125 anni della Lazio: paracadutista sul tetto di una casa"><span
+                                            class="is-video"></span><img
+                                            title="Viterbo, paura durante la festa per i 125 anni della Lazio: paracadutista sul tetto di una casa"
+                                            width="404" height="221"
+                                            src="https://picsum.photos/404/221"
+                                            alt="video myPlay"></a></figure>
+                                    <h2 class="titolo mx-2 titolo-bianco"><a href="#"
+                                                                             class="ml_primary_link">Viterbo, paura
+                                        durante la festa per i
+                                        125 anni della Lazio: paracadutista sul tetto di una casa</a></h2></div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="divider-white-margin my-3"></div>
+                    <div class="strip-1-square sotto listing">
+                        <div class="row">
+                            <article class="col-xs-12 html_base_square  sport calcio ">
+                                <div class="item_content">
+                                    <div class="row  middle-xs">
+                                        <div class="col square___content">
+                                            <figure class="thumbnail ps-2"><a
+                                                    href="#"
+                                                    title="Premier League, Vardy fischia al posto dell'arbitro infortunato. Cosa è successo durante Leicester-Southampton. Il video"><img
+                                                    title="Premier League, Vardy fischia al posto dell'arbitro infortunato. Cosa è successo durante Leicester-Southampton. Il video"
+                                                    width="64" height="64"
+                                                    src="https://statics.cedscdn.it/photos/THUMB/2025/05/03/8813256_03174050_onecms_19tuehgpnqljmmm3rsq.jpg" alt="immagine video"></a>
+                                            </figure>
+                                        </div>
+                                        <div class="col valign__content pe-2">
+                                            <div class="valign">
+                                                <h2 class="titolo titolo-bianco"><a
+                                                        href="#"
+                                                        class="ml_primary_link">Premier League, Vardy fischia al posto
+                                                    dell'arbitro infortunato. Cosa è successo durante
+                                                    Leicester-Southampton. <u>Il video</u></a></h2></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <div class="divider-white-margin"></div>
+                            <article class="col-xs-12 html_base_square  mondo ">
+                                <div class="item_content">
+                                    <div class="row  middle-xs">
+                                        <div class="col square___content">
+                                            <figure class="thumbnail ms-2"><a
+                                                    href="#"
+                                                    title="Bolivia, 36 ore nella palude tra gli alligatori: salvi dopo incidente aereo, il carburante li avrebbe protetti"><span
+                                                    class="is-video"></span><img
+                                                    title="Bolivia, 36 ore nella palude tra gli alligatori: salvi dopo incidente aereo, il carburante li avrebbe protetti"
+                                                    width="64" height="64"
+                                                    src="https://statics.cedscdn.it/photos/THUMB/2025/05/03/8813175_03161025_treini.jpg"
+                                                    onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"></a>
+                                            </figure>
+                                        </div>
+                                        <div class="col valign__content pe-2">
+                                            <div class="valign">
+                                                <h2 class="titolo mx-2 mb-3 titolo-bianco"><a
+                                                        href="/mondo/bolivia_36_ore_nella_palude_con_gli_alligatori_salvi_dopo_incidente_aereo-8813175.html"
+                                                        class="ml_primary_link mp-titolo">Bolivia, 36 ore nella palude
+                                                    tra gli
+                                                    alligatori: salvi dopo incidente aereo, il carburante li avrebbe
+                                                    protetti</a></h2></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="thinAD" class="thinAD border my-3">
+                    <img src="#" alt="*advertisement*">
+                </div>
+
+                <div id="alternati">
+                    <div class="d-flex align-items-end justify-content-between border-bottom border-black mb-3"
+                         style="height: 100%;">
+                        <div class="d-flex left-text ao-back-black d-inline-block align-self-end">
+                            <h3 class="accadeoggi-txt mb-0 mx-2">zoom</h3>
+                        </div>
+                    </div>
+                </div>
+                <article class="row art-dispari">
+                    <div class="col-xxl-4 col-xl-12 pe-0">
+                        <img class="ms-2 my-3" src="https://picsum.photos/100/100" alt="immagine alt 1">
+                    </div>
+                    <div class="col-xxl col-xl-12 d-flex ps-0 align-items-center">
+                        <h2 class="titolo alt-text ps-2"><a href="#"> Il film di Minecraf fa flop oop poopo p opooo  o p opo o op</a></h2>
+                    </div>
+                </article>
+                <article class="row justify-content-end art-pari">
+                    <div class="col-txt col-xxl col-xl-12 order-1 order-xxl-0  d-flex ps-0 align-items-center">
+                        <h2 class="titolo alt-text ps-2"><a href="#"> Il film di Minecraf fa flop oop poopo p opooo  o p opo o op</a></h2>
+                    </div>
+                    <div class="col-img col-xxl-4 col-xl-12 rder-0 order-xxl-1 pe-0">
+                        <img class="me-2 my-3 img-pari" src="https://picsum.photos/100/100" alt="immagine alt 1">
+                    </div>
+                </article>
+                <article class="row art-dispari">
+                    <div class="col-xxl-4 col-xl-12 pe-0">
+                        <img class="ms-2 my-3" src="https://picsum.photos/100/100" alt="immagine alt 1">
+                    </div>
+                    <div class="col-xxl col-xl-12 d-flex ps-0 align-items-center">
+                        <h2 class="titolo alt-text ps-2"><a href="#"> Il film di Minecraf fa flop oop poopo p opooo  o p opo o op</a></h2>
+                    </div>
+                </article>
+                <article class="row justify-content-end art-pari">
+                    <div class="col-txt col-xxl col-xl-12 order-1 order-xxl-0  d-flex ps-0 align-items-center">
+                        <h2 class="titolo alt-text ps-2"><a href="#"> Il film di Minecraf fa flop oop poopo p opooo  o p opo o op</a></h2>
+                    </div>
+                    <div class="col-img col-xxl-4 col-xl-12 rder-0 order-xxl-1 pe-0">
+                        <img class="me-2 my-3 img-pari" src="https://picsum.photos/100/100" alt="immagine alt 1">
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </div>
+</main>
+
+</body><div class="divider-vertical"></div>
 </html>

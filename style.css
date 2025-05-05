@@ -1,142 +1,975 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
-.p-3 text-bg-dark{
-    --bs-blue: #0d6efd;
-    --bs-indigo: #6610f2;
-    --bs-purple: #6f42c1;
-    --bs-pink: #d63384;
-    --bs-red: #dc3545;
-    --bs-orange: #fd7e14;
-    --bs-yellow: #ffc107;
-    --bs-green: #198754;
-    --bs-teal: #20c997;
-    --bs-cyan: #0dcaf0;
-    --bs-black: #000;
-    --bs-white: #fff;
-    --bs-gray: #6c757d;
-    --bs-gray-dark: #343a40;
-    --bs-gray-100: #f8f9fa;
-    --bs-gray-200: #e9ecef;
-    --bs-gray-300: #dee2e6;
-    --bs-gray-400: #ced4da;
-    --bs-gray-500: #adb5bd;
-    --bs-gray-600: #6c757d;
-    --bs-gray-700: #495057;
-    --bs-gray-800: #343a40;
-    --bs-gray-900: #212529;
-    --bs-primary: #0d6efd;
-    --bs-secondary: #6c757d;
-    --bs-success: #198754;
-    --bs-info: #0dcaf0;
-    --bs-warning: #ffc107;
-    --bs-danger: #dc3545;
-    --bs-light: #f8f9fa;
-    --bs-dark: #212529;
-    --bs-primary-rgb: 13,110,253;
-    --bs-secondary-rgb: 108,117,125;
-    --bs-success-rgb: 25,135,84;
-    --bs-info-rgb: 13,202,240;
-    --bs-warning-rgb: 255,193,7;
-    --bs-danger-rgb: 220,53,69;
-    --bs-light-rgb: 248,249,250;
-    --bs-dark-rgb: 33,37,41;
-    --bs-primary-text-emphasis: #052c65;
-    --bs-secondary-text-emphasis: #2b2f32;
-    --bs-success-text-emphasis: #0a3622;
-    --bs-info-text-emphasis: #055160;
-    --bs-warning-text-emphasis: #664d03;
-    --bs-danger-text-emphasis: #58151c;
-    --bs-light-text-emphasis: #495057;
-    --bs-dark-text-emphasis: #495057;
-    --bs-primary-bg-subtle: #cfe2ff;
-    --bs-secondary-bg-subtle: #e2e3e5;
-    --bs-success-bg-subtle: #d1e7dd;
-    --bs-info-bg-subtle: #cff4fc;
-    --bs-warning-bg-subtle: #fff3cd;
-    --bs-danger-bg-subtle: #f8d7da;
-    --bs-light-bg-subtle: #fcfcfd;
-    --bs-dark-bg-subtle: #ced4da;
-    --bs-primary-border-subtle: #9ec5fe;
-    --bs-secondary-border-subtle: #c4c8cb;
-    --bs-success-border-subtle: #a3cfbb;
-    --bs-info-border-subtle: #9eeaf9;
-    --bs-warning-border-subtle: #ffe69c;
-    --bs-danger-border-subtle: #f1aeb5;
-    --bs-light-border-subtle: #e9ecef;
-    --bs-dark-border-subtle: #adb5bd;
-    --bs-white-rgb: 255,255,255;
-    --bs-black-rgb: 0,0,0;
-    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-    --bs-body-font-family: var(--bs-font-sans-serif);
-    --bs-body-font-size: 1rem;
-    --bs-body-font-weight: 400;
-    --bs-body-line-height: 1.5;
-    --bs-body-color: #212529;
-    --bs-body-color-rgb: 33,37,41;
-    --bs-body-bg: #fff;
-    --bs-body-bg-rgb: 255,255,255;
-    --bs-emphasis-color: #000;
-    --bs-emphasis-color-rgb: 0,0,0;
-    --bs-secondary-color: rgba(33, 37, 41, 0.75);
-    --bs-secondary-color-rgb: 33,37,41;
-    --bs-secondary-bg: #e9ecef;
-    --bs-secondary-bg-rgb: 233,236,239;
-    --bs-tertiary-color: rgba(33, 37, 41, 0.5);
-    --bs-tertiary-color-rgb: 33,37,41;
-    --bs-tertiary-bg: #f8f9fa;
-    --bs-tertiary-bg-rgb: 248,249,250;
-    --bs-heading-color: inherit;
-    --bs-link-color: #0d6efd;
-    --bs-link-color-rgb: 13,110,253;
-    --bs-link-decoration: underline;
-    --bs-link-hover-color: #0a58ca;
-    --bs-link-hover-color-rgb: 10,88,202;
-    --bs-code-color: #d63384;
-    --bs-highlight-color: #212529;
-    --bs-highlight-bg: #fff3cd;
-    --bs-border-width: 1px;
-    --bs-border-style: solid;
-    --bs-border-color: #dee2e6;
-    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
-    --bs-border-radius: 0.375rem;
-    --bs-border-radius-sm: 0.25rem;
-    --bs-border-radius-lg: 0.5rem;
-    --bs-border-radius-xl: 1rem;
-    --bs-border-radius-xxl: 2rem;
-    --bs-border-radius-2xl: var(--bs-border-radius-xxl);
-    --bs-border-radius-pill: 50rem;
-    --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-    --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
-    --bs-focus-ring-width: 0.25rem;
-    --bs-focus-ring-opacity: 0.25;
-    --bs-focus-ring-color: rgba(13, 110, 253, 0.25);
-    --bs-form-valid-color: #198754;
-    --bs-form-valid-border-color: #198754;
-    --bs-form-invalid-color: #dc3545;
-    --bs-form-invalid-border-color: #dc3545;
-    --bs-breakpoint-xs: 0;
-    --bs-breakpoint-sm: 576px;
-    --bs-breakpoint-md: 768px;
-    --bs-breakpoint-lg: 992px;
-    --bs-breakpoint-xl: 1200px;
-    --bs-breakpoint-xxl: 1400px;
-    --bs-btn-close-filter: ;
-    --bs-carousel-indicator-active-bg: #fff;
-    --bs-carousel-caption-color: #fff;
-    --bs-carousel-control-icon-filter: ;
-    --bs-body-text-align: left;
-    font-family: var(--bs-body-font-family);
-    font-size: var(--bs-body-font-size);
-    font-weight: var(--bs-body-font-weight);
-    line-height: var(--bs-body-line-height);
-    text-align: var(--bs-body-text-align);
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    box-sizing: border-box;
-    color: #fff!important;
-    background-color: RGBA(var(--bs-dark-rgb),var(--bs-bg-opacity,1))!important;
-    padding: 1rem!important;
+@import "node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+header .container {
+    max-width: 70%; /* Riduce la larghezza della navbar */
+    margin: 0 auto; /* Centra la navbar */
+    padding: 0 0; /* Aggiunge spazio interno ai lati */
+}
+
+.divider-dark {
+    height: 1px; /* Altezza della linea */
+    background-color: #343a40; /* Colore della linea */
+    margin: 20px 0; /* Spaziatura sopra e sotto */
+    width: 100%; /* Larghezza della linea */
+}
+
+.divider-light {
+    height: 1px; /* Altezza della linea */
+    background-color: #e0e0e0; /* Colore grigio chiaro */
+    margin: 3px 0; /* Spaziatura sopra e sotto */
+    width: 100%; /* Larghezza della linea */
+    z-index: 1;
+}
+
+.divider-dark-spaced {
+    height: 1px; /* Altezza della linea */
+    background-color: #343a40; /* Colore grigio scuro */
+    margin: 15px 0; /* Spaziatura sopra e sotto */
+    width: 100%; /* Larghezza della linea */
+    z-index: 1;
+}
+
+/* Stile corretto per il divisore verticale nel main */
+.divider-vertical {
+    width: 1px; /* Larghezza del divisore */
+    background-color: #e0e0e0; /* Colore del divisore */
+    margin: 20px 15px 0 15px; /* Aggiunge un margine superiore più lungo */
+    height: auto; /* Altezza dinamica */
+    display: inline-block; /* Mostra il divisore come elemento in linea */
+    padding: 0; /* Rimuove il padding */
+    box-sizing: content-box; /* Assicura che solo la larghezza del divisore venga colorata */
+}
+
+.divider-vertical-dark {
+    width: 1px; /* Larghezza del divisore */
+    background-color: #343a40; /* Colore del divisore */
+    margin: 20px 15px 0 15px; /* Aggiunge un margine superiore più lungo */
+    height: auto; /* Altezza dinamica */
+    display: inline-block; /* Mostra il divisore come elemento in linea */
+    padding: 0; /* Rimuove il padding */
+    box-sizing: content-box; /* Assicura che solo la larghezza del divisore venga colorata */
+}
+
+
+.nav > li:nth-child(2),
+.nav > li:nth-child(3),
+.nav > li:nth-child(4) {
+    position: relative;
+}
+
+.nav > li:nth-child(2)::after,
+.nav > li:nth-child(3)::after,
+.nav > li:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 80%; /* Altezza della linea */
+    width: 1px; /* Larghezza della linea */
+    background-color: #e0e0e0; /* Colore della linea */
+}
+
+header .nav-link {
+    font-size: 13px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 18px;
+    text-align: center;
+}
+
+header .nav-linkLight {
+    font-size: 0.75rem; /* Dimensione uniforme */
+    font-weight: 700; /* Spessore uniforme */
+    color: #565656 !important;
+}
+
+header .big-icon {
+    font-size: 1.2rem;
+}
+
+
+.btn-notizie {
+    background-color: #450d13 !important;
+    color: white !important;
+    border-radius: 32px;
+    padding: 8px 20px; /* Spaziatura interna */
+    height: auto; /* Altezza dinamica */
+    width: auto; /* Larghezza dinamica */
+}
+
+header .btn-promo {
+    background-color: #b22222 !important;
+    color: white !important;
+    border-radius: 50px;
+    border: none; /* Rimuove eventuali bordi predefiniti */
+    padding: 8px 20px; /* Spaziatura interna */
+    height: auto; /* Altezza dinamica */
+    width: auto; /* Larghezza dinamica */
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    width: 400px; /* Larghezza della sidebar */
+    left: -400px; /* Nasconde la sidebar fuori dallo schermo */
+    height: 100%;
+    background-color: #f8f9fa;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 1050; /* Assicura che sia sopra altri elementi */
+}
+
+.sidebar.open {
+    left: 0; /* Mostra la sidebar */
+}
+
+.logo-mini {
+    width: 40px;
+    height: 40px;
+}
+
+.logoBig {
+    width: 400px;
+    height: 92px;
+}
+
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar .search-input {
+    padding-right: 40px; /* Spazio per l'icona a destra */
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar .search-input:focus {
+    outline: none; /* Rimuove il bordo blu */
+    border-color: #343a40; /* Colore del bordo più scuro */
+    font-weight: bold; /* Enfatizza il testo */
+    box-shadow: none; /* Rimuove eventuali ombre */
+}
+
+.search-bar .search-icon-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 1.2rem;
+    color: #6c757d; /* Colore dell'icona */
+    cursor: pointer;
+}
+
+.search-bar .search-icon-btn:focus {
+    outline: none; /* Rimuove il bordo di focus */
+}
+
+#closeSidebar {
+    background: none; /* Rimuove lo sfondo del pulsante */
+    border: none; /* Rimuove il bordo */
+    font-size: 1.5rem; /* Dimensione dell'icona */
+    color: #6c757d; /* Colore dell'icona */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+}
+
+#closeSidebar:hover {
+    color: #343a40; /* Cambia il colore al passaggio del mouse */
+}
+
+.dark-link {
+    color: black !important;
+    text-decoration: none !important;
+    list-style: none !important;
+}
+
+.area .row .item_content {
+    text-align: left; /* Allinea tutto il contenuto a sinistra */
+}
+
+.firma {
+    color: firebrick !important;
+    font-style: italic !important;
+    display: block; /* Trasforma lo span in un elemento blocco */
+    margin: 0; /* Rimuove eventuali margini */
+    text-align: left; /* Allinea il testo all'interno dello span */
+}
+
+.area .row .item_content h2 {
+    line-height: 10px !important;
+    text-align: left !important;
+}
+
+.titolo a {
+    color: black ; /* Colore del testo */
+    font-size: 15px !important; /* Dimensione del testo */
+    text-decoration: none !important; /* Rimuove la sottolineatura */
+    vertical-align: baseline;
+}
+
+/* Posiziona l'icona vettoriale sopra l'immagine della notizia */
+.area .row .item_content figure .info-item {
+    position: absolute;
+    bottom: 0; /* Posiziona in basso */
+    left: 0; /* Posiziona a sinistra */
+    margin: 0; /* Rimuove margini */
+    padding: 0; /* Rimuove padding */
+    list-style: none; /* Rimuove il pallino */
+    z-index: 2; /* Assicura che sia sopra l'immagine */
+}
+
+.area .row .item_content figure .info-item li {
+    display: inline-block; /* Mostra l'icona come elemento inline */
+}
+
+/* Assicura che il contenitore della figura sia posizionato relativamente */
+.area .row .item_content figure {
+    position: relative;
+}
+
+.header-middle__content {
+    display: flex;
+    justify-content: center; /* centra il contenuto orizzontalmente */
+    align-items: center; /* centra verticalmente */
+    position: relative;
+    padding: 20px;
+}
+
+/* Hover per le scritte delle notizie nella sezione "501" */
+.area[data-id="501"] .row .item_content h2.titolo a:hover {
+    color: #b3b3b3 !important; /* Cambia il colore del testo in grigio chiaro */
+}
+
+.header-middle__content .center {
+    text-align: center;
+    flex-grow: 1; /* si espande per occupare lo spazio centrale */
+}
+
+.header-middle__content .right {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+    font-size: 14px;
+}
+
+#meteo {
+    list-style: none; /* Rimuove i pallini */
+    padding: 0; /* Rimuove il padding predefinito */
+    margin: 0; /* Rimuove il margine predefinito */
+}
+
+@media (max-width: 1200px) {
+    #meteo {
+        transform: translateX(100px); /* Sposta il meteo di 100px a destra */
+        transition: transform 0.3s ease; /* Aggiunge una transizione fluida */
+    }
+}
+
+@media (max-width: 768px) {
+    #meteo {
+        display: none; /* Nasconde il meteo */
+    }
+}
+
+@media (max-width: 992px) {
+    .logoBig {
+        width: 300px; /* Ridimensiona il logo */
+        height: auto; /* Mantiene le proporzioni */
+    }
+}
+
+@media (max-width: 768px) {
+    .logoBig {
+        width: 200px; /* Ridimensiona ulteriormente il logo */
+        height: auto; /* Mantiene le proporzioni */
+    }
+}
+
+@media (max-width: 576px) {
+    .logoBig {
+        width: 150px; /* Ridimensiona ancora di più il logo */
+        height: auto; /* Mantiene le proporzioni */
+    }
+}
+
+header .data {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+header .temperatura,
+header .localita {
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.bi-chevron-right {
+    font-size: 0.8rem; /* Riduci la dimensione dell'icona */
+}
+
+.header-bottom__content {
+    display: flex;
+    justify-content: center; /* Centra il contenuto orizzontalmente */
+    align-items: center; /* Allinea verticalmente */
+    /* Spaziatura interna */
+}
+
+.header-bottom__content .topics {
+    display: flex;
+    flex-wrap: wrap; /* Permette di andare a capo se necessario */
+    justify-content: center; /* Centra gli elementi */
+    gap: 8px 50px; /* Spaziatura tra gli elementi */
+    list-style: none; /* Rimuove i pallini */
+    padding: 0; /* Rimuove il padding predefinito */
+    margin: 0; /* Rimuove il margine predefinito */
+}
+
+.header-bottom__content .topics li {
+    text-align: center; /* Centra il testo */
+}
+
+.header-bottom__content .topics a {
+    text-transform: uppercase; /* Trasforma il testo in maiuscolo */
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 21px;
+    color: #b22222;
+    text-decoration: none;
+}
+
+.header-bottom__content .topics a:hover {
+    background-color: #f0f0f0; /* Colore di sfondo al passaggio del mouse */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Per gestire il comportamento su schermi più piccoli */
+    gap: 15px; /* Spaziatura tra gli elementi */
+}
+
+.col-md-3 {
+    flex: 0 0 25%; /* Assicura che ogni elemento occupi il 25% della larghezza */
+    max-width: 25%;
+}
+
+.item_content {
+    text-align: center; /* Centra il contenuto all'interno di ogni articolo */
+    margin: 0 auto; /* Centra gli articoli */
+}
+
+/* Contenitore principale degli articoli */
+.area .row {
+    display: flex; /* Imposta il layout flessibile */
+    flex-wrap: wrap; /* Permette agli articoli di andare a capo se necessario */
+    justify-content: space-between; /* Distribuisce gli articoli con spazi uniformi */
+    gap: 15px; /* Spaziatura tra gli articoli */
+}
+
+/* Articoli */
+.area .row .col-xs-3 {
+    flex: 0 0 calc(25% - 15px); /* Ogni articolo occupa il 25% della larghezza meno il gap */
+    max-width: calc(25% - 15px); /* Limita la larghezza massima */
+    box-sizing: border-box; /* Include padding e bordi nella larghezza */
+}
+
+.area .row .item_content {
+    text-align: center; /* Centra il contenuto degli articoli */
+    margin: 0 auto; /* Centra gli articoli */
+}
+
+/* Layout per schermi medi (tablet) */
+@media (max-width: 992px) {
+    .area .row .col-xs-3 {
+        flex: 0 0 calc(50% - 15px); /* Ogni articolo occupa il 50% della larghezza meno il gap */
+        max-width: calc(50% - 15px); /* Limita la larghezza massima */
+    }
+}
+
+/* Layout per schermi piccoli (smartphone) */
+@media (max-width: 576px) {
+    .area .row .col-xs-3 {
+        flex: 0 0 100%; /* Ogni articolo occupa il 100% della larghezza */
+        max-width: 100%; /* Limita la larghezza massima */
+    }
+
+    .area .row {
+        gap: 10px; /* Riduce la spaziatura tra gli articoli */
+    }
+}
+
+/* Layout per main-content e right-rail */
+#main-content {
+    flex: 0 0 75%; /* Occupa il 75% della larghezza */
+    max-width: 75%;
+}
+
+#right-rail {
+    flex: 0 0 25%; /* Occupa il 25% della larghezza */
+    max-width: 25%;
+}
+
+
+
+/* Adattamento per schermi piccoli */
+@media (max-width: 768px) {
+    #main-content, #right-rail {
+        flex: 0 0 100%; /* Ogni sezione occupa il 100% della larghezza */
+        max-width: 100%;
+    }
+
+    .row {
+        flex-wrap: wrap; /* Permette agli elementi di andare a capo */
+    }
+}
+
+
+/* Stile per la testatina articolo */
+.testatina-articolo a {
+    color: firebrick !important; /* Colore rosso mattone */
+    font-weight: 900;
+    font-size: 0.9rem;
+    text-decoration: none !important; /* Rimuove la sottolineatura */
+    text-align: left !important; /* Allinea a sinistra */;
+}
+
+/* Allinea a sinistra il contenitore della testatina */
+.testatina-articolo {
+    text-align: left !important; /* Allinea il contenuto a sinistra */
+    display: block; /* Assicura che occupi tutta la larghezza disponibile */
+    margin-left: 0; /* Rimuove eventuali margini a sinistra */
+}
+
+/* Stile per il titolo dell'articolo */
+.titolo-main a {
+    text-decoration: none;
+    color: black;
+    line-height: normal;
+    font-weight: bold;
+}
+
+.approfondimenti {
+    display: flex;
+    gap: 10px; /* Spaziatura tra gli elementi */
+    list-style: none; /* Rimuove i pallini */
+    padding: 0; /* Rimuove il padding */
+    margin: 0; /* Rimuove il margine */
+}
+
+.approfondimenti li {
+    display: inline; /* Assicura che gli elementi rimangano in linea */
+}
+
+.approfondimenti-col {
+    text-align: left;
+    gap: 10px; /* Spaziatura tra gli elementi */
+    list-style: none; /* Rimuove i pallini */
+    padding: 0; /* Rimuove il padding */
+    margin: 0; /* Rimuove il margine */
+}
+
+.tags:hover {
+    color: #b3b3b3 !important; /* Colore di sfondo al passaggio del mouse */
+}
+
+/*corregge le caratteristiche del quadrato*/
+i.bi-square-fill {
+    font-size: 8px; /* Cambia la dimensione del quadrato */
+    color: #b22222; /* Cambia il colore del quadrato */
+    margin-right: 5px; /* Aggiunge spazio tra il quadrato e il testo */
+    vertical-align: middle; /* Allinea verticalmente il quadrato con il testo */
+}
+
+/* Stile per i tag sotto alle notizie */
+.tags {
+    color: black !important; /* Colore del testo */
+    font-size: 15px !important; /* Dimensione del testo */
+    text-decoration: none !important; /* Rimuove la sottolineatura */
+    vertical-align: baseline;
+    font-weight: 500
+}
+
+/*allinea l'immagine della notizi a sinistra con il testo*/
+.area .row .item_content figure {
+    text-align: left; /* Allinea il contenuto della figura a sinistra */
+}
+
+.area .row .item_content figure img {
+    display: block; /* Assicura che l'immagine si comporti come un elemento di blocco */
+    margin: 0; /* Rimuove eventuali margini */
+    width: 100%; /* L'immagine occupa tutta la larghezza del contenitore */
+    height: auto; /* Mantiene le proporzioni */
+}
+
+/* Stile per la navbar quando si scorre verso il basso */
+header.scrolled {
+    background-color: white !important; /* Sfondo bianco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+    position: fixed; /* Mantiene la navbar visibile */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0 15px !important; /* Riduce il padding intorno */
+    height: auto; /* Adatta l'altezza dinamicamente */
+    min-height: 40px; /* Altezza minima */
+}
+
+/* Rimuovi la linea divider-light in modalità scrollata */
+header.scrolled .divider-light {
+    display: none !important;
+}
+
+/* Stile per il logo nella navbar durante lo scroll */
+header .logo-big-navbar {
+    height: 40px; /* Altezza del logo */
+    max-width: 150px; /* Larghezza massima */
+    margin: 0 auto; /* Centra il logo */
+    display: block;
+}
+
+/* Nascondi i link "PERSONE", "SCHEDE" e "ARCHIVIO" durante lo scroll */
+header.scrolled .nav-linkLight {
+    display: none !important;
+}
+
+/* Nascondi tutto tranne il div .container durante lo scroll */
+header.scrolled .header-middle,
+header.scrolled .header-bottom {
+    display: none !important;
+}
+
+header.scrolled .container {
+    display: block !important; /* Mostra solo il div container*/
+}
+
+/* Stile per il logo centrato nella navbar scrollata */
+header.scrolled .navbar-logo {
+    height: 30px; /* Altezza del logo */
+    max-width: 120px; /* Larghezza massima */
+    margin: 0 auto; /* Centra il logo */
+    display: block;
+}
+
+/* Disposizione orizzontale per la navbar */
+header.scrolled .d-flex {
+    display: flex !important; /* Disposizione flessibile */
+    justify-content: space-between; /* Spaziatura tra gli elementi */
+    align-items: center; /* Allinea verticalmente */
+    flex-wrap: nowrap; /* Mantiene tutto in fila orizzontale */
+}
+
+/* Adattamento per schermi piccoli */
+@media (max-width: 768px) {
+    header.scrolled {
+        padding: 5px 10px; /* Riduce ulteriormente il padding */
+        min-height: 50px; /* Altezza minima per schermi piccoli */
+    }
+
+    header.scrolled .navbar-logo {
+        height: 25px; /* Riduce l'altezza del logo */
+        max-width: 100px; /* Riduce la larghezza massima */
+    }
+}
+
+/*stili per strip-1-right*/
+/* affianca immagine e titolo */
+
+/* Posiziona immagine e testo uno accanto all'altro */
+.strip-1-right .row {
+    display: flex; /* Imposta il layout flessibile */
+    flex-wrap: nowrap; /* Evita che gli elementi vadano a capo */
+    align-items: center; /* Allinea verticalmente */
+    gap: 15px; /* Spaziatura tra immagine e testo */
+}
+
+.strip-1-right .col-xs-6 {
+    flex: 0 0 50%; /* Ogni colonna occupa il 50% della larghezza */
+    max-width: 50%; /* Limita la larghezza massima */
+    box-sizing: border-box; /* Include padding e bordi nella larghezza */
+}
+
+.strip-1-right .col-xs-6 figure {
+    margin: 0; /* Rimuove margini dall'immagine */
+}
+
+.strip-1-right .valign__content {
+    text-align: left; /* Allinea il testo a sinistra */
+}
+
+.strip-1-right .valign__content .titolo {
+    font-size: 1rem; /* Dimensione del titolo */
+    font-weight: bold; /* Testo in grassetto */
+    line-height: 1.4; /* Spaziatura tra le righe */
+    margin-bottom: 10px; /* Spaziatura sotto il titolo */
+}
+
+.strip-1-right .valign__content .firma {
+    font-size: 0.9rem; /* Dimensione del testo dell'autore */
+    color: #555; /* Colore grigio scuro */
+    margin-top: 5px; /* Spaziatura sopra l'autore */
+}
+
+@media (max-width: 768px) {
+    .strip-1-right .row {
+        flex-wrap: wrap; /* Permette agli elementi di andare a capo su schermi piccoli */
+    }
+
+    .strip-1-right .col-xs-6 {
+        flex: 0 0 100%; /* Ogni colonna occupa il 100% della larghezza */
+        max-width: 100%; /* Limita la larghezza massima */
+    }
+
+    .strip-1-right .valign__content {
+        text-align: center; /* Centra il testo su schermi piccoli */
+    }
+}
+
+.titolo-main-medium a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: black;
+    line-height: normal;
+    font-weight: bold;
+}
+
+.divider {
+    margin-bottom: 30px;
+}
+
+.articles-row {
+    display: flex;
+    gap: 15px; /* Spaziatura tra gli articoli */
+    justify-content: space-between; /* Distribuisce uniformemente gli articoli */
+    align-items: baseline; /* Allinea gli articoli in alto */
+}
+
+
+.titolo-main-small {
+    line-height: 14px;
+    text-align: left;
+}
+
+.titolo-main-small a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.strip-3-bottom figure {
+    width: 264px; /* Larghezza uniforme */
+    height: 144px; /* Altezza uniforme */
+    margin: 0; /* Rimuove margini */
+    overflow: hidden; /* Nasconde il contenuto in eccesso */
+}
+
+.strip-3-bottom figure img {
+    width: 100%; /* Adatta l'immagine alla larghezza del contenitore */
+    height: 100%; /* Adatta l'immagine all'altezza del contenitore */
+    object-fit: cover; /* Mantiene le proporzioni e riempie il contenitore */
+}
+
+/*hover a tutti i titoli*/
+.titolo-hover a:hover {
+    color: #b3b3b3 !important;
+}
+
+/* Stile per il titolo della sezione "Roma" */
+.roma a {
+    color: firebrick !important;
+    text-decoration: none !important;
+}
+
+.more a {
+    font-size: 1rem !important;
+}
+
+.roma-line {
+    margin: 20px 0;
+}
+
+.divider-red {
+    height: 1px; /* Altezza della linea */
+    background-color: firebrick; /* Colore della linea */
+    margin: 10px 0; /* Spaziatura sopra e sotto */
+    width: 100%; /* Larghezza della linea */
+}
+
+.roma-text {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.mappa-text {
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+/*stili della newsletter*/
+.strip-nl {
+    background-color: #e6eef6;
+}
+
+.newsletter {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: black;
+}
+
+.newsletter-div {
+    height: 1px; /* Altezza della linea */
+    background-color: #343a40; /* Colore della linea */
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.nl-option-header {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: black;
+    text-align: left;
+}
+
+.intro {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.nl-content a {
+    text-decoration: none;
+    color: black;
+}
+
+.nl-firma {
+    color: #1F507A;
+    font-size: 1rem;
+    font-weight: 900;
+    text-align: left;
+}
+
+/*non allinea il titolo a sinistra*/
+.nl-option-title {
+    text-align: left !important;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.nl-title-hover:hover {
+    color: #b3b3b3;
+}
+
+/*sezione giorno e notte*/
+.giorno-notte {
+    background-color: #2c497f;
+}
+
+.gn-back-white {
+    background-color: white;
+}
+
+.giorno-notte-text {
+    margin: 0.4rem;
+    color: #2c497f;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.divider-white {
+    height: 1px; /* Altezza della linea */
+    background-color: white; /* Colore della linea */
+    width: 100%; /* Larghezza della linea */
+}
+
+.gn-title a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    line-height: normal;
+}
+
+/*banner pubblicitario*/
+.adv_banner {
+    text-align: center;
+    background-color: #eee;
+    position: relative;
+}
+
+.adv_Native1 img {
+    width: 100%; /* Occupa tutta la larghezza disponibile */
+    height: 110px; /* Altezza fissa */
+    object-fit: cover; /* Mantiene le proporzioni ritagliando l'immagine se necessario */
+}
+
+/*carosello*/
+.accadeoggi-btn{
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+.ao-back-black{
+    background-color: black;
+}
+.accadeoggi-txt{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 800;
+}
+.archivio{
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: black;
+    text-align: right;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.bi-chevron-right{
+    font-size: 0.6rem !important; /* Riduci la dimensione dell'icona */
+    font-weight: 900 !important;
+}
+.carousel-caption{
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+.carousel-horizontal-line {
+    position: absolute;
+    bottom: 25%; /* Posiziona la linea a 1/4 dal fondo */
+    left: 0;
+    width: 100%; /* Larghezza completa */
+    height: 2px; /* Altezza della linea */
+    background-color: white; /* Colore bianco */
+    z-index: 10; /* Assicura che sia visibile sopra gli altri elementi */
+    display: flex; /* Layout flessibile per posizionare le icone */
+    justify-content: space-between; /* Distribuisce le icone equidistanti */
+    align-items: center; /* Allinea verticalmente le icone */
+    padding: 0 10%; /* Spaziatura dai bordi laterali */
+}
+
+.carousel-horizontal-line i {
+    color: white; /* Colore delle icone */
+    font-size: 1rem; /* Dimensione delle icone */
+}
+.icon-center{
+    font-size: 4.5rem !important;
+    color: firebrick !important;
+}
+.icon-center .icon-text {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra orizzontalmente */
+    transform: translate(-50%, -50%); /* Centra esattamente */
+    font-size: 0.8rem; /* Dimensione del testo */
+    color: white; /* Colore del testo */
+    font-weight: bold; /* Testo in grassetto */
+    text-align: center; /* Allinea il testo */
+}
+.cr-bg-txt{
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+
+}
+.cr-sml-txt{
+font-weight: 700 !important;
+}
+.lower-ico {
+    width: 50px; /* Diametro del cerchio */
+    height: 50px; /* Diametro del cerchio */
+    position: absolute;
+    top: 75%; /* Allinea alla linea bianca */
+    transform: translateY(-50%);
+    z-index: 10; /* Assicura che siano visibili sopra gli altri elementi */
+    border: none; /* Rimuove eventuali bordi */
+}
+
+.carousel-control-prev-icon {
+    left: 3%; /* Posiziona il bottone a sinistra */
+    filter: brightness(0) invert(1); /* Rende l'icona visibile su sfondo scuro */
+}
+
+.carousel-control-next-icon {
+    right: 3%; /* Posiziona il bottone a destra */
+    filter: brightness(0) invert(1); /* Rende l'icona visibile su sfondo scuro */
+}
+.carousel-control-prev {
+    left: 3%; /* Posiziona il bottone a sinistra */
+}
+
+.carousel-control-next {
+    right: 3%; /* Posiziona il bottone a destra */
+}
+
+/*-----------------------stili della colonna di sinistra---------------------------*/
+#colonne-big {
+    display: flex;
+    flex-wrap: wrap; /* Default: le colonne vanno a capo */
+}
+
+@media (min-width: 1000px) {
+    #colonne-big {
+        flex-wrap: nowrap; /* Impedisce che le colonne vadano a capo su schermi xl */
+    }
+}
+@media (max-width: 1000px) {
+    #main-content, #right-rail {
+        flex: 0 0 100%; /* Ogni colonna occupa il 100% della larghezza */
+        max-width: 100%; /* Limita la larghezza massima */
+    }
+}
+
+/*myPlay*/
+.myplay{
+    background-color: #5f5f5f;
+}
+.titolo-bianco a{
+    color: white !important;
+}
+.divider-white-margin{
+    height: 1px;
+    background-color: white;
+    margin: 0 auto; /* Centra la linea */
+    width: 95%; /* Imposta un margine laterale per rientrare nello sfondo */
+}
+.middle-xs{
+    --bs-gutter-x: 0;
+}
+
+/*advetisement*/
+.thinAD{
+height: 600px;
+}
+
+/*articoli alternati*/
+.art-dispari{
+    background-color: #f3f2f2;
+}
+.art-pari{
+    background-color: white;
+}
+
+.alt-text{
+    line-height: 0.8rem;
+}
+.art-pari .col-img{
+    text-align: right;
 }
