@@ -112,31 +112,31 @@
 <header class="px-3 pb-3 text-bg-white">
     <div class="container">
         <nav aria-label="Barra di navigazione principale">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <div class="d-flex flex-wrap align-items-center justify-content-center ">
 
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <ul class="nav  col-lg-auto me-xl-auto mb-2 justify-content-center mb-md-0">
                     <li><a href="#" class="nav-link px-2 text-dark" id="openSidebar" aria-label="menù"><i
                             class="fas fa-bars big-icon" aria-hidden="true"></i></a></li>
-                    <li><a href="#" class="nav-link px-2 text-secondary" id="searchSidebar" aria-label="cerca"><i
+                    <li class="hide-small"><a href="#" class="nav-link px-2 text-secondary" id="searchSidebar" aria-label="cerca"><i
                             class="bi bi-search big-icon" aria-hidden="true"></i></a></li>
-                    <li><a href="#" class="nav-link px-2 text-dark nav-linkLight">PERSONE</a></li>
-                    <li><a href="#" class="nav-link px-2 text-dark nav-linkLight">SCHEDE</a></li>
-                    <li><a href="#" class="nav-link px-2 text-dark nav-linkLight">ARCHIVIO</a></li>
+                    <li><a href="#" class="nav-link px-2 text-dark nav-linkLight hide-small">PERSONE</a></li>
+                    <li><a href="#" class="nav-link px-2 text-dark nav-linkLight hide-small">SCHEDE</a></li>
+                    <li><a href="#" class="nav-link px-2 text-dark nav-linkLight hide-small">ARCHIVIO</a></li>
                 </ul>
-
+                <div class="hide-big img-fluid logoStrict ms-3 "><img src="logoBig.jpeg" alt="logo"></div>
                 <div class="text-end d-flex align-items-center gap-2">
-                    <a href="#" class="nav-link px-2 text-dark" aria-label="notifiche"><i
-                            class="bi bi-bell big-icon me-2"
+                    <a href="#" class="nav-link ps-2 pe-md-2 pe-0 text-dark" aria-label="notifiche"><i
+                            class="bi bi-bell big-icon me-md-2 me-0"
                             aria-hidden="true"></i></a>
 
-                    <button type="button" class="btn btn-notizie me-2 nav-link"><i class="bi bi-pin-angle-fill me-2 "
+                    <button type="button" class="btn btn-notizie me-2 nav-link hide-small"><i class="bi bi-pin-angle-fill me-2 "
                                                                                    aria-hidden="true"></i> LE TUE
                         NOTIZIE
                     </button>
-                    <button type="button" class="btn btn-promo me-2 nav-link">PROMO FLASH</button>
+                    <button type="button" class="btn btn-promo me-2 nav-link hide-small">PROMO FLASH</button>
                     <a href="#" class="nav-link px-2 text-dark"><i class="bi bi-person big-icon me-2"
                                                                    aria-hidden="true"></i>
-                        ACCEDI</a>
+                        <span class="hide-small">ACCEDI</span></a>
                 </div>
             </div>
         </nav>
@@ -146,7 +146,7 @@
     <div class="divider-light container"></div>
 
 
-    <div class="header-middle">
+    <div class="header-middle hide-small">
         <!-- <div class="wrapper container-fluid"> -->
         <div class="header-middle__content">
             <div class="row middle-xs">

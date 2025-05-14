@@ -545,8 +545,8 @@ header.scrolled .divider-light {
 /* Stile per il logo nella navbar durante lo scroll */
 header .logo-big-navbar {
     height: 40px; /* Altezza del logo */
-    max-width: 150px; /* Larghezza massima */
-    margin: 0 auto; /* Centra il logo */
+    width: 150px; /* Larghezza massima */
+    margin: 0; /* Centra il logo */
     display: block;
 }
 
@@ -1122,21 +1122,25 @@ header.scrolled .d-flex {
     flex-wrap: nowrap;
 }
 
-.podcast-text a{
+.podcast-text a {
     font-size: 1.1rem !important;
-    line-height:1rem !important ;
+    line-height: 1rem !important;
 }
+
 .podcast-text a:hover {
     color: #b3b3b3;
 }
+
 .podcast-article {
     display: flex; /* Rende l'articolo un contenitore flex */
     align-items: center; /* Allinea verticalmente gli elementi al centro */
 }
-.podcast-article a{
+
+.podcast-article a {
     line-height: normal;
 }
-.pc-bkg{
+
+.pc-bkg {
     background-color: #f8f7f7;
 }
 
@@ -1170,4 +1174,37 @@ header.scrolled .d-flex {
 
 .nav-link:hover {
 
+}
+
+/*navbar fix responsive*/
+@media (max-width: 768px) {
+    .hide-small {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .hide-big {
+        display: none;
+    }
+}
+
+.logoStrict img {
+    width: 140px !important;
+    height: 40px !important;
+    margin-right: 10px; /* Spazio tra il logo e il testo */
+}
+
+.navbar-logo {
+    width: 140px !important;
+    height: 40px !important;
+    margin-right: 10px; /* Spazio tra il logo e il testo */
+}
+
+@media (min-width: 768px) {
+    @media (max-width: 991px) {
+        header.scrolled .navbar-logo {
+            margin: 0;
+        }
+    }
 }

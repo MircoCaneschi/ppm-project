@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector("header");
     const navContainer = document.querySelector(".container .d-flex");
-    const elementsToHide = document.querySelectorAll(".header-middle, .header-bottom, .nav-linkLight:not(#openSidebar):not(#searchSidebar)");
+    const elementsToHide = document.querySelectorAll(".header-middle, .logoStrict, .header-bottom, .nav-linkLight:not(#openSidebar):not(#searchSidebar)");
     const navbarLogo = document.createElement("img");
 
     navbarLogo.src = "logoBig.jpeg"; // Percorso dell'immagine
