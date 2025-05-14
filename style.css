@@ -1117,6 +1117,24 @@ header.scrolled .d-flex {
     border-radius: 0;
 }
 
+#email-module > .col:first-child {
+    flex-grow: 1; /* Permette alla card di espandersi e restringersi */
+    min-width: 0; /* Importante per permettere al contenuto di restringersi sotto la sua larghezza minima di default */
+}
+
+#email-module > .col:last-child {
+    flex-shrink: 0; /* Impedisce al bottone di restringersi più del necessario */
+}
+
+#email-module .card {
+    width: 100%; /* Assicura che la card occupi tutta la larghezza disponibile nella sua colonna */
+}
+#email-module .card-body {
+    white-space: nowrap; /* Impedisce al testo "Inserisci la tua email" di andare a capo */
+    overflow: hidden; /* Nasconde il testo che eccede */
+    text-overflow: ellipsis; /* Aggiunge i puntini di sospensione per indicare il testo troncato */
+}
+
 /*podcast*/
 #podcast-bar {
     flex-wrap: nowrap;
