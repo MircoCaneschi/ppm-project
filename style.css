@@ -1201,15 +1201,17 @@ header.scrolled .d-flex {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .hide-big {
         display: none;
     }
 }
 
 .logoStrict img {
-    width: 140px !important;
-    height: 40px !important;
+    max-width: 100%;
+    height: auto;
+    max-height: 60px !important;
+    display: block;
     margin-right: 10px; /* Spazio tra il logo e il testo */
 }
 
